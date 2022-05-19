@@ -1,0 +1,37 @@
+.flex-intro {
+  padding: 80px;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.half {
+  min-width: 440px;
+}
+
+.third {
+  width: 330px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.desktop {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+section {
+  padding: 4rem 2rem;
+  border-bottom: 2px solid $salmon;
+}
+
+.max-width {
+  max-width: 1100px;
+  margin: auto;
+}

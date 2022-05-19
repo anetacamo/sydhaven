@@ -1,0 +1,31 @@
+.tags {
+  max-width: 900px;
+  margin: 24px auto;
+}
+
+.type {
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px;
+  padding: 4px 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  &:hover {
+    background-color: $purple;
+    transition-duration: 350ms;
+    cursor: pointer;
+  }
+}
+
+button {
+  background-color: black;
+  padding: 16px 32px;
+  letter-spacing: 1.6px;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  border-style: none;
+  box-shadow: 8px 8px 0px $purple;
+}
