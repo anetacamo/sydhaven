@@ -1,9 +1,14 @@
-import type { NextPage } from "next";
 import Head from "next/head";
+import { ReactNode } from "react";
 import Footer from "../../components/Footer";
 import Menu from "../../components/Menu";
 
-export const SinglePageLayout = ({ children, title }) => {
+interface LayoutProps {
+  title?: string;
+  children?: ReactNode;
+}
+
+export const SinglePageLayout = ({ children, title }: LayoutProps) => {
   return (
     <>
       <Head>

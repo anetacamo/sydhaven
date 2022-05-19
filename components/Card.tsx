@@ -3,18 +3,18 @@ import { slugify } from "../utils/slugify";
 import Link from "next/link";
 
 interface ImageProps {
-  title: string;
-  text: string;
-  background: string;
-  color: string;
-  image: string;
-  tags: any;
-  opening: string;
-  housefor: any;
-  events: any;
-  address: string;
-  type: string;
-  bordercolor: string;
+  title?: string;
+  text?: string;
+  background?: string;
+  color?: string;
+  image?: string;
+  tags?: any;
+  opening?: string;
+  housefor?: any;
+  events?: any;
+  address?: string;
+  type?: string;
+  bordercolor?: string;
 }
 
 export default function Intro({
