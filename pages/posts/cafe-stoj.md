@@ -1,5 +1,5 @@
 ---
-type: place
+type: space
 title: Cafe Stoj
 color: salmon
 tags: [cafe, music]

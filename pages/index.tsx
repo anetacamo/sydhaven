@@ -4,6 +4,7 @@ import path from "path";
 import { Key } from "react";
 import Card from "../components/Card";
 import StarsDivider from "../components/StarsDivider";
+import TagsList from "../components/TagsList";
 import { DefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
 
 export async function getStaticProps() {
@@ -34,11 +35,17 @@ interface HomeProps {
 }
 
 export default function Home({ posts }: HomeProps) {
-  console.log(posts);
   const title = "Home";
   return (
     <DefaultLayout title={title}>
-      <section className="grid">
+      <section className="grid center">
+        <StarsDivider />
+        <h1 style={{ fontSize: 80 }}>
+          Wellcome to
+          <br /> Sydhaven
+        </h1>
+
+        <TagsList posts={posts} />
         <div className="flex-center">
           {posts?.map(
             (
@@ -56,6 +63,7 @@ export default function Home({ posts }: HomeProps) {
             ) => (
               <Card
                 background="gray"
+                bordercolor="salmon"
                 key={index}
                 address={post.frontmatter.address}
                 title={post.frontmatter.title}
@@ -72,7 +80,11 @@ export default function Home({ posts }: HomeProps) {
         <h2> Calendar</h2>
         <p style={{ maxWidth: 500, margin: "auto" }}>
           To see the exact date and all sorts of upcoming activities, check the
-          facebook site of Sudhaven or click any of the place links
+          facebook site of{" "}
+          <a href="https://www.facebook.com/groups/154685458042586/events">
+            Sydhaven
+          </a>{" "}
+          or click any of the place links
         </p>
         <StarsDivider />
 

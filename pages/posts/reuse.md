@@ -1,5 +1,5 @@
 ---
-type: place
+type: space
 title: REUSE
 color: yellow
 tags: [community, workshop, recycling]

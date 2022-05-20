@@ -1,5 +1,5 @@
 ---
-type: place
+type: space
 title: Kulbroen
 color: yellow
 tags: [music, food, community]
