@@ -3,8 +3,7 @@ interface TagsProps {
 }
 
 export default function TagsList({ posts }: TagsProps) {
-  console.log(posts[1].frontmatter.tags);
-  let allTags = [];
+  let allTags: any[] = [];
   const tags = posts.map((item) =>
     item.frontmatter.tags?.map((tag: string) => allTags.push(tag))
   );
@@ -24,4 +23,7 @@ export default function TagsList({ posts }: TagsProps) {
       </div>
     </>
   );
+}
+function allTags(allTags: any, arg1: any) {
+  throw new Error("Function not implemented.");
 }
