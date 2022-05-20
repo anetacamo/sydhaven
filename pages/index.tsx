@@ -40,8 +40,8 @@ export default function Home({ posts }: HomeProps) {
     <DefaultLayout title={title}>
       <section className="grid center">
         <StarsDivider />
-        <h1 style={{ fontSize: 80 }}>
-          Wellcome to
+        <h1 style={{ fontSize: 64 }}>
+          Welcome to
           <br /> Sydhaven
         </h1>
 
@@ -60,19 +60,20 @@ export default function Home({ posts }: HomeProps) {
                 };
               },
               index?: Key | null
-            ) => (
-              <Card
-                background="gray"
-                bordercolor="salmon"
-                key={index}
-                address={post.frontmatter.address}
-                title={post.frontmatter.title}
-                text={post.frontmatter.text}
-                image={post.frontmatter.image}
-                type={post.frontmatter.type}
-                opening={post.frontmatter.opening}
-              />
-            )
+            ) =>
+              post.frontmatter.type === "space" && (
+                <Card
+                  background="gray"
+                  bordercolor="salmon"
+                  key={index}
+                  address={post.frontmatter.address}
+                  title={post.frontmatter.title}
+                  text={post.frontmatter.text}
+                  image={post.frontmatter.image}
+                  type={post.frontmatter.type}
+                  opening={post.frontmatter.opening}
+                />
+              )
           )}
         </div>
       </section>
@@ -89,18 +90,21 @@ export default function Home({ posts }: HomeProps) {
         <StarsDivider />
 
         <div className="flex-center">
-          {posts.map((post, index) => (
-            <Card
-              background="black"
-              key={index}
-              address={post.frontmatter.address}
-              title={post.frontmatter.title}
-              text={post.frontmatter.text}
-              image={post.frontmatter.image}
-              type={post.frontmatter.type}
-              opening={post.frontmatter.opening}
-            />
-          ))}
+          {posts.map(
+            (post, index) =>
+              post.frontmatter.type === "event" && (
+                <Card
+                  background="black"
+                  key={index}
+                  address={post.frontmatter.address}
+                  title={post.frontmatter.title}
+                  text={post.frontmatter.text}
+                  image={post.frontmatter.image}
+                  type={post.frontmatter.type}
+                  opening={post.frontmatter.opening}
+                />
+              )
+          )}
         </div>
       </section>
     </DefaultLayout>
