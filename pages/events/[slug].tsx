@@ -55,9 +55,9 @@ export default function EventPage({ frontmatter, posts }: EventPageProps) {
           ))}
         </ul>
         <ul className="links">
-          {events?.map((tag: string, index: number) => (
+          {events?.map((space: string, index: number) => (
             <Link href={`/events/${space}`} key={index}>
-              <div className="type bg-salmon">{tag}</div>
+              <div className="type bg-salmon">{space}</div>
             </Link>
           ))}
         </ul>
