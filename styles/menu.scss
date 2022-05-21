@@ -17,7 +17,8 @@ nav {
     margin-top: 12px;
     margin-bottom: 12px;
   }
-  li {
+  li,
+  .logo {
     cursor: pointer;
     transition-duration: 350ms;
     &:hover {
@@ -35,9 +36,4 @@ footer {
   position: fixed;
   bottom: 0;
   width: calc(100% - 4rem);
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
 }

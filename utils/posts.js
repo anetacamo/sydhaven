@@ -2,36 +2,25 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const postsDirectory = path.join(process.cwd(), "posts");
+export async function getStaticProps() {
+  // get files from the directory
+  const files = fs.readdirSync(path.join("pages/posts"));
 
-export function getSortedPostsData() {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, "");
+  const posts = files.map((filename) => {
+    // get slug
+    const slug = filename.replace(".md", "");
+    // get all frontmatter here:
+    const markdownWithMeta = fs.readFileSync(
+      path.join("pages/posts", filename),
+      "utf-8"
+    );
+    const { data: frontmatter } = matter(markdownWithMeta);
 
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
-
-    // Combine the data with the id
-    return {
-      id,
-      ...matterResult.data,
-    };
+    return { slug, frontmatter };
   });
-  // Sort posts by date
-  return allPostsData.sort(({ title: a }, { title: b }) => {
-    if (a < b) {
-      return 1;
-    } else if (a > b) {
-      return -1;
-    } else {
-      return 0;
-    }
-  });
+  return {
+    props: {
+      posts: posts,
+    },
+  };
 }

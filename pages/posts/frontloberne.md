@@ -1,5 +1,5 @@
 ---
-type: place
+type: space
 title: Fronlobetne
 color: yellow
 tags: [culture house, venue, community, education]

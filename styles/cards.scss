@@ -23,14 +23,15 @@
   margin: 24px;
 
   &.small {
-    height: 300px;
+    margin: 8px;
+    height: auto;
+    padding: 16px 8px 12px 8px;
     max-width: 300px;
-    padding: 24px 12px;
     text-align: center;
     display: flex;
+    border: none;
     flex-direction: column;
     justify-content: center;
-    padding-top: 40px;
     p {
       color: white;
       font-weight: 300;

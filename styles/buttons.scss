@@ -8,10 +8,10 @@
   display: inline-block;
   font-size: 12px;
   margin: 4px;
-  padding: 4px 12px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
+  padding: 5px 12px 3px 12px;
   &:hover {
     background-color: $purple;
     transition-duration: 350ms;
@@ -21,11 +21,20 @@
 
 button {
   background-color: black;
-  padding: 16px 32px;
-  letter-spacing: 1.6px;
+  padding: 12px 32px;
+  letter-spacing: 4px;
   border-radius: 4px;
+  text-transform: uppercase;
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   border-style: none;
-  box-shadow: 8px 8px 0px $purple;
+  font-family: "Violet Sans";
+  box-shadow: 3px 3px 0px $purple;
+  border: 2px solid black;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+    color: black;
+    transition-duration: 350ms;
+  }
 }

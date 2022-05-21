@@ -4,7 +4,7 @@ export default function Menu() {
   return (
     <nav>
       <Link href="/">
-        <h2>S</h2>
+        <h2 className="logo">S</h2>
       </Link>
       <ul className="flex">
         <Link href="/map">

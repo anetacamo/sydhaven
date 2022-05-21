@@ -1,5 +1,5 @@
 ---
-type: place
+type: space
 title: KnudsKiosk
 color: yellow
 tags: [bikes, repair, workshop, recycling]
