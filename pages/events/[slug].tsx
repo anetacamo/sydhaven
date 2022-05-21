@@ -4,14 +4,12 @@ import path from "path";
 import matter from "gray-matter";
 import Image from "next/image";
 import Link from "next/link";
-import { slugify } from "../../utils/slugify";
-import SmallCard from "../../components/SmallCard";
 import TagsList from "../../components/TagsList";
 import CardsList from "../../components/CardsList/CardsList";
 
 interface EventPageProps {
   frontmatter?: any;
-  posts?: any[];
+  posts: any[];
 }
 
 export default function EventPage({ frontmatter, posts }: EventPageProps) {
@@ -44,23 +42,23 @@ export default function EventPage({ frontmatter, posts }: EventPageProps) {
         )}
         <ul className="links">
           {tags?.map((tag: string, index: number) => (
-            <div className="type bg-purple" key={index}>
-              {tag}
-            </div>
+            <Link href={`/events/${tag}`} key={index}>
+              <div className="type bg-purple">{tag}</div>
+            </Link>
           ))}
         </ul>
         <ul className="links">
-          {housefor?.map((tag: string, index: number) => (
-            <Link href={`/tags/${tag}`} key={index}>
-              <div className="type bg-yellow">{tag}</div>
+          {housefor?.map((space: string, index: number) => (
+            <Link href={`/events/${space}`} key={index}>
+              <div className="type bg-yellow">{space}</div>
             </Link>
           ))}
         </ul>
         <ul className="links">
           {events?.map((tag: string, index: number) => (
-            <div className="type bg-salmon" key={index}>
-              {tag}
-            </div>
+            <Link href={`/events/${space}`} key={index}>
+              <div className="type bg-salmon">{tag}</div>
+            </Link>
           ))}
         </ul>
       </SinglePageLayout>
