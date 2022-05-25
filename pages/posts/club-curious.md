@@ -1,7 +1,6 @@
 ---
 type: space
 title: Club Curious
-color: red
 tags: [workshops, creativity, club, linocut]
 event: ["Corgis and Cava", "Friday Bar", "CreCafe"]
 image: star.png

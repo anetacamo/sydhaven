@@ -2,6 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import CardsList from "../components/CardsList/CardsList";
+import Paragraph from "../components/Paragraph/Paragraph";
 import StarsDivider from "../components/StarsDivider";
 import TagsList from "../components/TagsList";
 import { DefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
@@ -40,21 +41,21 @@ export default function Home({ posts }: HomeProps) {
         <StarsDivider />
         <h1>Welcome to Sydhaven</h1>
         <TagsList posts={posts} />
-        <CardsList posts={posts} regular tag="space" background="gray" />
+        <CardsList posts={posts} regular type="space" background="gray" />
       </section>
 
       <section className="bg-black center">
         <h2>Calendar</h2>
-        <p style={{ maxWidth: 500, margin: "auto" }}>
+        <Paragraph>
           To see the exact date and all sorts of upcoming activities, check the
           facebook site of{" "}
           <a href="https://www.facebook.com/groups/154685458042586/events">
             Sydhaven
           </a>{" "}
           or click any of the place links
-        </p>
+        </Paragraph>
         <StarsDivider />
-        <CardsList posts={posts} tag="event" />
+        <CardsList posts={posts} type="event" />
       </section>
 
       <section className="bg-salmon center">
@@ -74,44 +75,36 @@ export default function Home({ posts }: HomeProps) {
 
       <section className="bg-red center">
         <h2>Open for Public</h2>
-        <p style={{ maxWidth: 500, margin: "12px auto" }}>
+        <Paragraph>
           To see the exact date and all sorts of upcoming activities, check the
           facebook site of{" "}
           <a href="https://www.facebook.com/groups/154685458042586/events">
             Sydhaven
           </a>{" "}
           or click any of the place links
-        </p>
+        </Paragraph>
         <StarsDivider />
-        <CardsList posts={posts} tag="event" />
+        <CardsList posts={posts} opening background="gray" />
       </section>
 
-      <section className="bg-red center">
+      <section className="bg-gray center">
         <h2>Community & Sustainability</h2>
-        <p style={{ maxWidth: 500, margin: "12px auto" }}>
+        <Paragraph>
           To see the exact date and all sorts of upcoming activities, check the
-          facebook site of{" "}
-          <a href="https://www.facebook.com/groups/154685458042586/events">
-            Sydhaven
-          </a>{" "}
-          or click any of the place links
-        </p>
+          facebook site of Sydhaven or click any of the specific links.
+        </Paragraph>
         <StarsDivider />
-        <CardsList posts={posts} tag="event" />
+        <CardsList posts={posts} tag="community" />
       </section>
 
       <section className="bg-red center">
         <h2>Culture Makers & Value Creators</h2>
-        <p style={{ maxWidth: 500, margin: "12px auto" }}>
+        <Paragraph>
           To see the exact date and all sorts of upcoming activities, check the
-          facebook site of{" "}
-          <a href="https://www.facebook.com/groups/154685458042586/events">
-            Sydhaven
-          </a>{" "}
-          or click any of the place links
-        </p>
+          facebook site of Sydhaven. or click any of the following links
+        </Paragraph>
         <StarsDivider />
-        <CardsList posts={posts} tag="event" background="purple" />
+        <CardsList posts={posts} tag="event makers" background="purple" />
       </section>
     </DefaultLayout>
   );

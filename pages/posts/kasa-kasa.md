@@ -1,7 +1,6 @@
 ---
 type: space
 title: KASA KASA
-color: salmon
 tags: [food]
 image: coffee.png
 address: Jaegergaardsgade 146

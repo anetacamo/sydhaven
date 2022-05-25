@@ -11,6 +11,7 @@ type CardType = {
   address?: string;
   type?: string;
   bordercolor?: string;
+  link?: string;
 };
 
 export default CardType;

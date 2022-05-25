@@ -1,7 +1,6 @@
 ---
-type: space
+type: studio
 title: KnudsKiosk
-color: yellow
 tags: [bikes, repair, workshop, recycling]
 image: bike.png
 address: Jaegergaardsgade 152

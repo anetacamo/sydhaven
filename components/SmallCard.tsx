@@ -14,7 +14,7 @@ export default function SmallCard({
   background,
   bordercolor,
 }: CardProps) {
-  const { image, type, title, address, text, opening } = post;
+  const { image, type, title, address, link, text, opening } = post;
   return (
     <div className={`card small bg-${background} border-${bordercolor}`}>
       <div style={{ padding: 8 }}>
@@ -33,9 +33,14 @@ export default function SmallCard({
       <h5 className="bolded salmon">{address}</h5>
       {/* <h5>{text}</h5> */}
       {opening && (
-        <h5 className="">
+        <h5>
           <span className="salmon bolded">open </span>
           {opening}
+        </h5>
+      )}
+      {link && (
+        <h5 className="salmon underlined">
+          <a href={link}>See homepage</a>
         </h5>
       )}
     </div>

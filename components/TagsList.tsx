@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { slugify } from "../utils/slugify";
+
 interface TagsProps {
   posts: any[];
 }
@@ -16,14 +19,11 @@ export default function TagsList({ posts }: TagsProps) {
       </h6> */}
       <div className="tags">
         {tagsonce.map((tag, index) => (
-          <div className="type bg-purplelight" key={index}>
-            {tag}
-          </div>
+          <Link href={`/tags/${slugify(tag)}`} key={index}>
+            <div className="type bg-purplelight">{tag}</div>
+          </Link>
         ))}
       </div>
     </>
   );
-}
-function allTags(allTags: any, arg1: any) {
-  throw new Error("Function not implemented.");
 }

@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TagsList from "../../components/TagsList";
 import CardsList from "../../components/CardsList/CardsList";
+import { slugify } from "../../utils/slugify";
 
 interface EventPageProps {
   frontmatter?: any;
@@ -19,9 +20,6 @@ export default function EventPage({ frontmatter, posts }: EventPageProps) {
   return (
     <>
       <SinglePageLayout>
-        <Link href={`/types/${type}`}>
-          <h4 className="type bg-purplelight">{type}</h4>
-        </Link>
         <h1>{title}</h1>
         <Image
           src={`/cards/${image}`}
@@ -31,7 +29,11 @@ export default function EventPage({ frontmatter, posts }: EventPageProps) {
           width={80}
           objectFit="contain"
         />
-
+        <div>
+          <Link href={`/types/${type}`}>
+            <h4 className="type bg-purplelight">{type}</h4>
+          </Link>
+        </div>
         <h5 className="bolded salmon">{address}</h5>
         <h5 style={{ maxWidth: 400, margin: "-8px auto" }}>{text}</h5>
         {opening && (
@@ -42,21 +44,21 @@ export default function EventPage({ frontmatter, posts }: EventPageProps) {
         )}
         <ul className="links">
           {tags?.map((tag: string, index: number) => (
-            <Link href={`/events/${tag}`} key={index}>
+            <Link href={`/events/${slugify(tag)}`} key={index}>
               <div className="type bg-purple">{tag}</div>
             </Link>
           ))}
         </ul>
         <ul className="links">
-          {housefor?.map((space: string, index: number) => (
-            <Link href={`/events/${space}`} key={index}>
-              <div className="type bg-yellow">{space}</div>
+          {housefor?.map((item: string, index: number) => (
+            <Link href={`/events/${slugify(item)}`} key={index}>
+              <div className="type bg-yellow">{item}</div>
             </Link>
           ))}
         </ul>
         <ul className="links">
           {events?.map((space: string, index: number) => (
-            <Link href={`/events/${space}`} key={index}>
+            <Link href={`/events/${slugify(space)}`} key={index}>
               <div className="type bg-salmon">{space}</div>
             </Link>
           ))}

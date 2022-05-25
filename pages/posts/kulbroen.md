@@ -1,8 +1,8 @@
 ---
-type: space
+type: cafe
+main: true
 title: Kulbroen
-color: yellow
-tags: [music, food, community]
+tags: [music, food, community, cafe]
 image: bridge.png
 address: Jaegergaardsgade 152
 opening-hours: weekday 9-16
