@@ -1,7 +1,7 @@
 ---
 type: space
 title: Club Curious
-tags: [workshops, creativity, club, linocut]
+tags: [workshop, creativity, club, linocut]
 event: ["Corgis and Cava", "Friday Bar", "CreCafe"]
 image: star.png
 address: Jaegergaardsgade 152

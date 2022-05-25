@@ -1,7 +1,7 @@
 ---
 type: space
 title: C-Cube
-tags: [community, event makers, workshops, podcasts]
+tags: [community, event makers, workshop, podcasts]
 image: stars.png
 address: Jaegergaardsgade 152
 text: CREATIVE • CONNECTIONS • COLLECTIVE. We are a co-production collective working across projects!
