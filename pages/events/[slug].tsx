@@ -14,7 +14,6 @@ interface EventPageProps {
 }
 
 export default function EventPage({ frontmatter, posts }: EventPageProps) {
-  console.log(posts);
   const { title, type, address, opening, image, text, events, housefor, tags } =
     frontmatter;
   return (

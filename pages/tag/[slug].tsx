@@ -17,8 +17,6 @@ interface TagsPageProps {
 const folder = "pages/tags";
 
 export default function TagsPage({ posts, tags, slug }: TagsPageProps) {
-  console.log(posts);
-  console.log(tags);
   return (
     <>
       <SinglePageLayout>
@@ -62,7 +60,6 @@ interface StaticProps {
 }
 
 export async function getStaticProps({ params: { slug } }: StaticProps) {
-  console.log("slug", slug);
   const markdownWithMeta = fs.readFileSync(
     path.join("pages/tags", slug + ".md"),
     "utf-8"

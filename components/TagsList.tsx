@@ -11,7 +11,6 @@ export default function TagsList({ posts }: TagsProps) {
     item.frontmatter.tags?.map((tag: string) => allTags.push(tag))
   );
   let tagsonce = [...new Set(allTags)];
-  console.log(tagsonce);
   return (
     <>
       {/* <h6 className="salmon" style={{ marginBottom: "-16px" }}>
@@ -19,7 +18,7 @@ export default function TagsList({ posts }: TagsProps) {
       </h6> */}
       <div className="tags">
         {tagsonce.map((tag, index) => (
-          <Link href={`/tags/${slugify(tag)}`} key={index}>
+          <Link href={`/tag/${slugify(tag)}`} key={index}>
             <div className="type bg-purplelight">{tag}</div>
           </Link>
         ))}

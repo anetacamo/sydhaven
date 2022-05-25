@@ -10,7 +10,6 @@ interface CardProps extends CardType {
 }
 
 export default function Card({ post, background, bordercolor }: CardProps) {
-  console.log(post);
   const { image, type, title, address, text, opening } = post;
   return (
     <div className={`card bg-${background} border-${bordercolor}`}>
