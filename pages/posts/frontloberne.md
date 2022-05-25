@@ -9,9 +9,9 @@ tags:
     community,
     education,
     workshop,
-    business,
     event makers,
     podcast,
+    studio,
   ]
 image: frontloberne.png
 address: Jaegergaardsgade 152

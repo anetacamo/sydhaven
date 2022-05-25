@@ -1,7 +1,7 @@
 ---
 type: studio
 title: KnudsKiosk
-tags: [bikes, repair, workshop, recycling]
+tags: [bikes, repair, workshop, recycling, studio]
 image: bike.png
 address: Jaegergaardsgade 152
 opening-hours: weekday 9-16
