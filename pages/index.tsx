@@ -84,7 +84,7 @@ export default function Home({ posts }: HomeProps) {
           or click any of the place links
         </Paragraph>
         <StarsDivider />
-        <CardsList posts={posts} opening background="gray" />
+        <CardsList posts={posts} opening="present" background="gray" />
       </section>
 
       <section className="bg-gray center">
