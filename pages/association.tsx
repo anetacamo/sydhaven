@@ -144,7 +144,7 @@ const Association = ({ posts }: AssociationProps) => {
             Newsletter
           </Paragraph>
           <StarsDivider />
-          <CardsList posts={posts} sydhaven="true" />
+          <CardsList posts={posts} sydhaven={true} />
           <button>
             <div className="flex-center">
               <span style={{ paddingRight: 8, paddingTop: 3 }}>Contact us</span>
