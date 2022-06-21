@@ -31,7 +31,11 @@ export async function getStaticProps() {
   };
 }
 
-const Association = ({ posts }) => {
+interface AssociationProps {
+  posts: any[];
+}
+
+const Association = ({ posts }: AssociationProps) => {
   const title = "Association of South Harbour";
   return (
     <DefaultLayout title={title}>
