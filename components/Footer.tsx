@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer>
@@ -8,7 +10,12 @@ export default function Footer() {
         <li>events___</li>
         <li>vision___</li>
       </ul>
-      <p>anetacamo</p>
+      <Link href="https://www.sydhavnenskvarteret.dk">Sydhavens Kvarteret</Link>
+      <Link href="https://www.sydhavnensfestival.dk">Sydhavens Festival</Link>
+      www.sammenomsydhaven.dk link to facebook, instagram possibility to do a
+      takeover. Skriv til sydhaven LinkedIn, BADGE: Connect people to district.
+      I am part of SydHaven. art, culture, creative business, social udsetter,
+      education, community, bevaelse: movement <p>anetacamo</p>
     </footer>
   );
 }

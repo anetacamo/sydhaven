@@ -20,7 +20,7 @@ $gray: #f4f4f4;
   --black: black;
 }
 
-$menu-border-color: $salmon;
+$menu-border-color: #fde2ff;
 
 $colors: "pink", "salmon", "yellow", "blue", "purple", "purplelight", "black",
   "gray";
@@ -49,8 +49,10 @@ $colors: "pink", "salmon", "yellow", "blue", "purple", "purplelight", "black",
   color: white;
 }
 
-.bg-purple {
-  color: $yellow;
+.bg-yellow,
+.bg-gray,
+.bg-white {
+  color: black;
 }
 
 .filter-white {

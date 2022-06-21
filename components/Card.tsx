@@ -2,39 +2,57 @@ import Image from "next/image";
 import { slugify } from "../utils/slugify";
 import Link from "next/link";
 import CardType from "../types/card.type";
+import { ReactNode } from "react";
 
 interface CardProps extends CardType {
   background?: string;
   bordercolor?: string;
-  post: CardType;
+  post?: CardType;
+  children?: ReactNode;
+  style?: React.CSSProperties;
 }
 
-export default function Card({ post, background, bordercolor }: CardProps) {
-  const { image, type, title, address, text, opening } = post;
+export default function Card({
+  post,
+  background,
+  bordercolor,
+  style,
+  children,
+}: CardProps) {
   return (
-    <div className={`card bg-${background} border-${bordercolor}`}>
-      <div style={{ padding: 12 }}>
-        <Image
-          src={`/cards/${image}`}
-          alt="blue"
-          className={`half filter-yellow`}
-          height={80}
-          width={80}
-          objectFit="contain"
-        />
-      </div>
-      <h4 className="type bg-purplelight">{type}</h4>
-      <Link href={`/events/${slugify(title)}`}>
-        <h4 style={{ marginBottom: "-8px", cursor: "pointer" }}>{title}</h4>
-      </Link>
-      <h5 className="bolded salmon">{address}</h5>
-      <h5>{text}</h5>
-      {opening && (
+    <div
+      className={`card bg-${background} border-${bordercolor}`}
+      style={style}
+    >
+      {post?.image && (
+        <div style={{ padding: 12 }}>
+          <Image
+            src={`/cards/${post?.image}`}
+            alt="blue"
+            className={`half filter-yellow`}
+            height={80}
+            width={80}
+            objectFit="contain"
+          />
+        </div>
+      )}
+      {post?.type && <h4 className="type bg-purplelight">{post?.type}</h4>}
+      {post?.title && (
+        <Link href={`/events/${slugify(post?.title)}`}>
+          <h4 style={{ marginBottom: "-8px", cursor: "pointer" }}>
+            {post?.title}
+          </h4>
+        </Link>
+      )}
+      {post?.address && <h5 className="bolded salmon">{post?.address}</h5>}
+      {post?.address && <h5>{post?.text}</h5>}
+      {post?.opening && (
         <h5 className="">
           <span className="salmon bolded">open </span>
-          {opening}
+          {post?.opening}
         </h5>
       )}
+      {children}
     </div>
   );
 }

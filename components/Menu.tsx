@@ -13,11 +13,23 @@ export default function Menu() {
         <Link href="/calendar">
           <li>calendar___</li>
         </Link>
+        <Link href="/gallery">
+          <li>history___</li>
+        </Link>
+        <Link href="/gallery">
+          <li>present___</li>
+        </Link>
         <Link href="/vision">
           <li>vision___</li>
         </Link>
         <Link href="/gallery">
           <li>gallery___</li>
+        </Link>
+        <Link href="/association">
+          <li>association___</li>
+        </Link>
+        <Link href="/gallery">
+          <li>publications___</li>
         </Link>
       </ul>
       <p>da / en</p>

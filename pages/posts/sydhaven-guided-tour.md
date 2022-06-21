@@ -1,4 +1,5 @@
 ---
+sydhaven: true
 type: event
 title: Sydhaven Guided Tour
 tags: [workshop, community]

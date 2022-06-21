@@ -19,7 +19,8 @@
   }
 }
 
-button {
+button,
+input {
   background-color: black;
   padding: 12px 32px;
   letter-spacing: 4px;
@@ -36,5 +37,21 @@ button {
     background-color: transparent;
     color: black;
     transition-duration: 350ms;
+  }
+  svg {
+    vertical-align: middle;
+  }
+}
+
+input {
+  background-color: white;
+  padding: 12px 20px;
+  min-width: 240px;
+  letter-spacing: 2px;
+  color: black;
+  outline: none;
+  text-transform: none;
+  &:hover {
+    background-color: lightgray;
   }
 }

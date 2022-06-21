@@ -43,6 +43,7 @@ const Calendar = ({ posts }: CalendarProps) => {
           Sydhaven
         </a>{" "}
         or click any of the place links.
+        
       </Paragraph>
       <StarsDivider />
       <CardsList posts={posts} type="event" regular />

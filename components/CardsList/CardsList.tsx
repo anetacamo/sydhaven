@@ -9,6 +9,7 @@ interface CardsListProps {
   regular?: boolean;
   type?: string;
   opening?: string;
+  sydhaven?: boolean;
 }
 
 export default function CardsList({
@@ -18,6 +19,7 @@ export default function CardsList({
   background,
   regular,
   opening,
+  sydhaven,
 }: CardsListProps) {
   return (
     <div className="flex-center" style={{ alignItems: "unset" }}>
@@ -65,6 +67,26 @@ export default function CardsList({
         posts.map(
           (post, index) =>
             post.frontmatter.opening &&
+            (regular ? (
+              <Card
+                background={background || "black"}
+                key={index}
+                post={post.frontmatter}
+                bordercolor="salmon"
+              />
+            ) : (
+              <SmallCard
+                background={background || "black"}
+                key={index}
+                post={post.frontmatter}
+              />
+            ))
+        )}
+
+      {sydhaven &&
+        posts.map(
+          (post, index) =>
+            post.frontmatter.sydhaven &&
             (regular ? (
               <Card
                 background={background || "black"}
