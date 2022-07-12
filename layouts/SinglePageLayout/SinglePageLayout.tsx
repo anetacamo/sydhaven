@@ -17,7 +17,10 @@ export const SinglePageLayout = ({ children, title }: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />
-      <section className="bg-black center" style={{ minHeight: "50vh" }}>
+      <section
+        className="bg-black center"
+        style={{ minHeight: "50vh", position: "relative" }}
+      >
         <h1>{title}</h1>
         {children}
       </section>

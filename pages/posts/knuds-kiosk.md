@@ -1,9 +1,11 @@
 ---
-type: studio
+type: creative collective
+main: true
 title: KnudsKiosk
 tags: [bikes, repair, workshop, recycling, studio]
 image: bike.png
-address: Jaegergaardsgade 152
+address: Jægergårdsgade 156S
 opening-hours: weekday 9-16
 text: Knuds Kiosk is a bike repair workshop and a small community.
+link: http://www.knudskiosk.dk/
 ---

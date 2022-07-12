@@ -1,9 +1,8 @@
 ---
 sydhaven: true
 type: event
-title: Sydhaven Guided Tour
-tags: [workshop, community]
+title: Sydhavnen Guided Tour
+tags: [workshop]
 image: stars.png
 text: Sydhaven Guided Tour to showcase all sorts of initiatives and culture that has been going on in the area.
-opening: every two months
 ---

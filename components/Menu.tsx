@@ -31,6 +31,9 @@ export default function Menu() {
         <Link href="/gallery">
           <li>publications___</li>
         </Link>
+        <Link href="/all">
+          <li>DISCOVER</li>
+        </Link>
       </ul>
       <p>da / en</p>
     </nav>

@@ -1,6 +1,9 @@
 .tags {
   max-width: 900px;
   margin: 24px auto;
+  .bg-chosen {
+    background-color: $blue;
+  }
 }
 
 .type {

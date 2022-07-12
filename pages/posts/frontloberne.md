@@ -1,5 +1,5 @@
 ---
-type: space
+type: culture house
 main: true
 title: Frontloberne
 tags:
@@ -12,6 +12,7 @@ tags:
     event makers,
     podcast,
     studio,
+    funding,
   ]
 image: frontloberne.png
 address: Jaegergaardsgade 152
@@ -28,4 +29,5 @@ housefor:
 events:
   - Sydhaven festival
   - Each One Teach One
+link: https://www.frontloberne.dk/
 ---
