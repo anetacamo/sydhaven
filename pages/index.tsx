@@ -6,6 +6,7 @@ import Paragraph from "../components/Paragraph/Paragraph";
 import StarsDivider from "../components/StarsDivider";
 import TagsList from "../components/TagsList";
 import { DefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
+import Image from "next/image";
 
 export async function getStaticProps() {
   // get files from the directory
@@ -37,11 +38,33 @@ export default function Home({ posts }: HomeProps) {
   const title = "Home";
   return (
     <DefaultLayout title={title}>
-      <section className="grid center">
+      <section
+        className="grid center"
+        style={{
+          minHeight: "30vh",
+          padding: "160px 0",
+          backgroundImage: "/20.jpeg",
+        }}
+      >
         <StarsDivider />
-        <h1>Welcome to Sydhaven</h1>
+
+        <h4 style={{ maxWidth: 800, margin: "auto", fontSize: 40 }}>
+          <span className="purple">South Harbour</span> is an area in Aarhus
+          west. To see the exact date and all sorts of upcoming activities,
+          check the facebook site of
+        </h4>
+
+        <StarsDivider />
+      </section>
+      <section className="grid center">
+        <h2>Who makes South Harbour</h2>
+        <Paragraph>
+          To see the exact date and all sorts of upcoming activities, check the
+          facebook site of or click any of the place links
+        </Paragraph>
         <TagsList posts={posts} />
-        <CardsList posts={posts} regular type="space" background="gray" />
+        <CardsList posts={posts} regular type="main" background="gray" main />
+        <button>& Many More</button>
       </section>
 
       <section className="bg-black center">
