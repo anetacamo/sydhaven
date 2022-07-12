@@ -1,7 +1,7 @@
 import { slugify } from "../../utils/slugify";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import styles from "./All.module.scss";
+import styles from "./ListDisplay.module.scss";
 
 interface ListDisplayProps {
   post: any;
@@ -20,21 +20,23 @@ const ListDisplay = ({ post, key }: ListDisplayProps) => {
         </div>
         <h3 className={styles.type}>{post.frontmatter.type}</h3>
       </div>
-      <p className={styles.text}>{post.frontmatter.text}</p>
-      <ul className="links">
-        {post.frontmatter.tags?.map((tag: string, index: number) => (
-          <Link href={`/events/${slugify(tag)}`} key={index}>
-            <div className="type bg-purple">{tag}</div>
+      <div className={styles.moreInfo}>
+        <p className={styles.text}>{post.frontmatter.text}</p>
+        <ul className="links">
+          {post.frontmatter.tags?.map((tag: string, index: number) => (
+            <Link href={`/events/${slugify(tag)}`} key={index}>
+              <div className="type bg-purple">{tag}</div>
+            </Link>
+          ))}
+        </ul>
+        {post.frontmatter.link && (
+          <Link href={post.frontmatter.link}>
+            <p className={styles.link}>
+              <FaArrowRight /> <span style={{ marginLeft: 8 }}> visit</span>
+            </p>
           </Link>
-        ))}
-      </ul>
-      {post.frontmatter.link && (
-        <Link href={post.frontmatter.link}>
-          <p className={styles.link}>
-            <FaArrowRight /> <span style={{ marginLeft: 8 }}> visit</span>
-          </p>
-        </Link>
-      )}
+        )}
+      </div>
     </div>
   );
 };

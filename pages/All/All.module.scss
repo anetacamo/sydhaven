@@ -23,33 +23,12 @@
 }
 
 .listContainer {
-  max-width: 900;
+  max-width: 900px;
   margin: auto;
+  text-align: left;
+  margin-top: 80px;
 }
 .flexName {
   justify-content: space-between;
   text-transform: lowercase;
-}
-.address {
-  text-transform: lowercase;
-  opacity: 0.8;
-  font-size: 18px;
-  letter-spacing: 2px;
-}
-.type {
-  color: salmon;
-  margin-left: 8px;
-  line-height: 1.4;
-}
-.title {
-  text-transform: lowercase;
-}
-.text {
-  margin-top: -8px;
-  max-width: 700;
-}
-.link {
-  text-decoration: underline;
-  display: flex;
-  align-items: center;
 }

@@ -2,14 +2,10 @@ import { useState } from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import CategoryList from "../../components/CategoryList";
-import TagsList from "../../components/TagsList";
-import ListDisplay from "../../components/ListDisplay/ListDisplay";
-import { slugify } from "../../utils/slugify";
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
-import { SinglePageLayout } from "../../layouts/SinglePageLayout/SinglePageLayout";
-import styles from "./All.module.scss";
+import CategoryList from "../components/CategoryList";
+import ListDisplay from "../components/ListDisplay/ListDisplay";
+import { SinglePageLayout } from "../layouts/SinglePageLayout/SinglePageLayout";
+import styles from "./All/All.module.scss";
 
 export async function getStaticProps() {
   // get files from the directory
@@ -36,9 +32,12 @@ interface AllProps {
   posts: any[];
 }
 
-const Map = ({ posts }: AllProps) => {
-  const title = "Discover";
+const All = ({ posts }: AllProps) => {
   const [category, setCategory] = useState([]);
+  const postsToRender = posts.filter((post) =>
+    category === [] ? true : post.frontmatter.type.includes(category)
+  );
+  console.log(postsToRender);
 
   return (
     <SinglePageLayout>
@@ -56,18 +55,13 @@ const Map = ({ posts }: AllProps) => {
         onTagClick={setCategory}
         category={category}
       />
-      <div style={{ textAlign: "left", marginTop: 80 }}>
-        {category === []
-          ? posts.map((post, index) => <ListDisplay key={index} post={post} />)
-          : posts.map(
-              (post, index) =>
-                category.includes(post.frontmatter.type) && (
-                  <ListDisplay key={index} post={post} />
-                )
-            )}
+      <div className={styles.listContainer}>
+        {postsToRender.map((post, index) => (
+          <ListDisplay key={index} post={post} />
+        ))}
       </div>
     </SinglePageLayout>
   );
 };
 
-export default Map;
+export default All;
