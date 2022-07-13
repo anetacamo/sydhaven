@@ -13,12 +13,13 @@ export default function Menu() {
         <Link href="/calendar">
           <li>calendar___</li>
         </Link>
+        {/*}
         <Link href="/gallery">
           <li>history___</li>
         </Link>
         <Link href="/gallery">
           <li>present___</li>
-        </Link>
+  </Link>*/}
         <Link href="/vision">
           <li>vision___</li>
         </Link>

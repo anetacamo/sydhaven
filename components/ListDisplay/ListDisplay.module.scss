@@ -8,12 +8,13 @@
 }
 .address {
   text-transform: lowercase;
-  opacity: 0.8;
-  font-size: 18px;
+  opacity: 0.4;
+  font-size: 16px;
   letter-spacing: 2px;
 }
 .type {
-  color: salmon;
+  color: #6220fc;
+  margin: 16px 0;
   margin-left: 8px;
   line-height: 1.4;
 }
@@ -23,8 +24,8 @@
   margin-bottom: 0px;
 }
 .text {
-  margin-top: -8px;
-  max-width: 700;
+  margin-top: 8px;
+  max-width: 600px;
 }
 .link {
   text-decoration: underline;
@@ -32,5 +33,5 @@
   align-items: center;
 }
 .moreInfo {
-  display: none;
+  padding-bottom: 40px;
 }

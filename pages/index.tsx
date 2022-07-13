@@ -78,7 +78,22 @@ export default function Home({ posts }: HomeProps) {
           or click any of the place links
         </Paragraph>
         <StarsDivider />
-        <CardsList posts={posts} type="event" />
+        {/*<CardsList posts={posts} type="event" />*/}
+        <div className="flex-center" style={{ alignItems: "unset" }}>
+          {posts.map((post, index) => (
+            <>
+              {post.frontmatter.type == "event" && (
+                <div key={index} className="card small bg-black border-purple">
+                  <h2>13.4.22</h2>
+                  <h4 style={{ marginTop: 0, marginBottom: -8 }}>
+                    {post.frontmatter.title}
+                  </h4>
+                  <h5>{post.frontmatter.address}</h5>
+                </div>
+              )}{" "}
+            </>
+          ))}
+        </div>
       </section>
 
       <section className="bg-salmon center">

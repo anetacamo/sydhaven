@@ -2,6 +2,7 @@ import { slugify } from "../../utils/slugify";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import styles from "./ListDisplay.module.scss";
+import { useState } from "react";
 
 interface ListDisplayProps {
   post: any;
@@ -9,18 +10,22 @@ interface ListDisplayProps {
 }
 
 const ListDisplay = ({ post, key }: ListDisplayProps) => {
+  const [extended, setExtended] = useState(false);
   return (
-    <div className={styles.listContainer}>
+    <div
+      className={styles.listContainer}
+      onClick={() => setExtended(!extended)}
+    >
       <div className={`flex-center ${styles.flexName}`}>
         <div>
           <h2 className={styles.title}>
-            {post.frontmatter.title} |{" "}
+            {post.frontmatter.title}{" "}
             <span className={styles.address}>{post.frontmatter.address}</span>
           </h2>
         </div>
         <h3 className={styles.type}>{post.frontmatter.type}</h3>
       </div>
-      <div className={styles.moreInfo}>
+      <div className={`${styles.moreInfo} ${extended || "hidden"}`}>
         <p className={styles.text}>{post.frontmatter.text}</p>
         <ul className="links">
           {post.frontmatter.tags?.map((tag: string, index: number) => (

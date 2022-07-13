@@ -1,12 +1,18 @@
 import Link from "next/link";
 import styles from "./LeftMenu.module.scss";
 
-export default function LeftMenu() {
+interface LeftMenuProps {
+  items: string[];
+}
+
+export default function LeftMenu({ items }: LeftMenuProps) {
   return (
     <ul className={styles.menu}>
-      <Link href="/map">
-        <li>map</li>
-      </Link>
+      {items.map((item: string, index: number) => (
+        <Link href="/map" key={index}>
+          <li>{item}</li>
+        </Link>
+      ))}
     </ul>
   );
 }

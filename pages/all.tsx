@@ -48,7 +48,7 @@ const All = ({ posts }: AllProps) => {
           <button className={styles.button}>+ Show yourself</button>
         </div>
       </div>
-      <h1 style={{ marginTop: 40 }}>Discover</h1>
+      <h1 style={{ marginTop: 40 }}>Sydhaven Members</h1>
       {/*<TagsList posts={posts} />*/}
       <CategoryList
         posts={posts}
