@@ -5,15 +5,15 @@ const Vision = () => {
   const title = "Vision";
   return (
     <>
-    <SinglePageLayout title={title}>
-      {title}
-      <p>
-      Local members - what do they want to share - links to the pages,
-      description => all</p>
-
-      
-    </SinglePageLayout>
-    <LeftMenu items={["history", "presence", "vision"]}/></>
+      <SinglePageLayout title={title}>
+        {title}
+        <p>
+          Local members - what do they want to share - links to the pages,
+          description all
+        </p>
+      </SinglePageLayout>
+      <LeftMenu items={["history", "presence", "vision"]} />
+    </>
   );
 };
 
