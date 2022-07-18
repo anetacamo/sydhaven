@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
@@ -6,6 +6,7 @@ import CategoryList from "../components/CategoryList";
 import ListDisplay from "../components/ListDisplay/ListDisplay";
 import { SinglePageLayout } from "../layouts/SinglePageLayout/SinglePageLayout";
 import styles from "./All/All.module.scss";
+import Post from "../types/card.type";
 
 export async function getStaticProps() {
   // get files from the directory
@@ -29,20 +30,34 @@ export async function getStaticProps() {
 }
 
 interface AllProps {
-  posts: any[];
+  posts: Post[];
 }
 
 const All = ({ posts }: AllProps) => {
   const [category, setCategory] = useState([]);
-  const postsToRender = posts.filter((post) =>
-    category === [] ? true : post.frontmatter.type.includes(category)
-  );
-  console.log(postsToRender);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const postsToRender = posts.filter((post) =>
+      category === [] ? true : post.frontmatter.type.includes(category)
+    );
+    const results = postsToRender.filter((post) =>
+      searchQuery === "" ? true : post.frontmatter.title.includes(searchQuery)
+    );
+    console.log(searchQuery);
+    console.log(results.map((post) => post.frontmatter.title));
+    setBlogs(results);
+  }, [searchQuery, category]);
 
   return (
     <SinglePageLayout>
       <div className={`flex ${styles.absolute}`}>
-        <input className={styles.search} placeholder="search" />
+        <input
+          className={styles.search}
+          placeholder="search"
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
         <div>
           <h5 style={{ marginBottom: 12 }}>Also part of Sydhaven?</h5>
           <button className={styles.button}>+ Show yourself</button>
@@ -56,7 +71,7 @@ const All = ({ posts }: AllProps) => {
         category={category}
       />
       <div className={styles.listContainer}>
-        {postsToRender.map((post, index) => (
+        {blogs.map((post, index) => (
           <ListDisplay key={index} post={post} />
         ))}
       </div>

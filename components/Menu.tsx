@@ -8,10 +8,10 @@ export default function Menu() {
       </Link>
       <ul className="flex">
         <Link href="/map">
-          <li>map___</li>
+          <li>map</li>
         </Link>
         <Link href="/calendar">
-          <li>calendar___</li>
+          <li>calendar</li>
         </Link>
         {/*}
         <Link href="/gallery">
@@ -21,19 +21,19 @@ export default function Menu() {
           <li>present___</li>
   </Link>*/}
         <Link href="/vision">
-          <li>vision___</li>
+          <li>vision</li>
         </Link>
         <Link href="/gallery">
-          <li>gallery___</li>
+          <li>gallery</li>
         </Link>
         <Link href="/association">
-          <li>association___</li>
+          <li>association</li>
         </Link>
         <Link href="/gallery">
-          <li>publications___</li>
+          <li>publications</li>
         </Link>
         <Link href="/all">
-          <li>DISCOVER</li>
+          <li>members</li>
         </Link>
       </ul>
       <p>da / en</p>

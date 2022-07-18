@@ -23,6 +23,7 @@ export default function CategoryList({
       <div className="tags">
         {tagsonce.map((tag, index) => (
           //<Link href={`/tag/${slugify(tag)}`} key={index}>
+          //const isEmpty = tag === category ? [] : tag
           <div
             key={index}
             className={`type bg-purplelight ${category == tag && "bg-chosen"}`}

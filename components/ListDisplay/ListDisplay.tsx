@@ -9,7 +9,7 @@ interface ListDisplayProps {
   key: number;
 }
 
-const ListDisplay = ({ post, key }: ListDisplayProps) => {
+const ListDisplay = ({ post }: ListDisplayProps) => {
   const [extended, setExtended] = useState(false);
   return (
     <div
