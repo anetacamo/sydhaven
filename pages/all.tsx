@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
@@ -31,12 +31,13 @@ export async function getStaticProps() {
 
 interface AllProps {
   posts: Post[];
+  category?: string;
 }
 
 const All = ({ posts }: AllProps) => {
-  const [category, setCategory] = useState([]);
+  const [category, setCategory] = useState<string | string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState<Post[]>([]);
 
   useEffect(() => {
     const postsToRender = posts.filter((post) =>
@@ -48,7 +49,7 @@ const All = ({ posts }: AllProps) => {
     setBlogs(results);
   }, [searchQuery, category]);
 
-  const onCategorySet = (cat) => {
+  const onCategorySet = (cat: string) => {
     console.log(category);
     const previousCategory = category;
     previousCategory === cat ? setCategory([]) : setCategory(cat);

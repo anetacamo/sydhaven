@@ -4,7 +4,7 @@ import { slugify } from "../utils/slugify";
 interface CategoryProps {
   posts: any[];
   onTagClick: any;
-  category: any[];
+  category: string[] | string;
 }
 
 export default function CategoryList({
