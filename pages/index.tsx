@@ -101,7 +101,7 @@ export default function Home({ posts }: HomeProps) {
         <h2>Open for Public</h2>
         <Paragraph>
           Many places that offer different creative workshops, curses, cultural
-          events, provide a space for connecting or developing one's skills or
+          events, provide a space for connecting or developing ones skills or
           simply just having a chat. To see the exact date and all sorts of
           upcoming activities, check the facebook site of{" "}
           <a href="https://www.facebook.com/groups/154685458042586/events">
