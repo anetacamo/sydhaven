@@ -21,20 +21,25 @@ export default function CategoryList({
         filter by:
       </h6> */}
       <div className="tags">
-        {tagsonce.map((tag, index) => (
-          //<Link href={`/tag/${slugify(tag)}`} key={index}>
-          //const isEmpty = tag === category ? [] : tag
-          <div
-            key={index}
-            className={`type bg-purplelight ${category == tag && "bg-chosen"}`}
-            style={{ transitionDuration: "350ms" }}
-            onClick={() => onTagClick(tag)}
-          >
-            {tag}
-            {category == tag && <span style={{ paddingLeft: 8 }}> x</span>}
-          </div>
+        {tagsonce.map(
+          (tag, index) => {
+            return (
+              //<Link href={`/tag/${slugify(tag)}`} key={index}>
+              <div
+                key={index}
+                className={`type bg-purplelight ${
+                  category == tag && "bg-chosen"
+                }`}
+                style={{ transitionDuration: "350ms" }}
+                onClick={() => onTagClick(tag)}
+              >
+                {tag}
+                {category == tag && <span style={{ paddingLeft: 8 }}> x</span>}
+              </div>
+            );
+          }
           //</Link>
-        ))}
+        )}
       </div>
     </>
   );

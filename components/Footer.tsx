@@ -5,17 +5,26 @@ export default function Footer() {
     <footer>
       <h2>H</h2>
       <ul className="flex">
-        <li>map___</li>
-        <li>calender___</li>
-        <li>events___</li>
-        <li>vision___</li>
+        <Link href="/vision">
+          <li>vision</li>
+        </Link>
+        <Link href="/history">
+          <li>history</li>
+        </Link>
+        <Link href="/present">
+          <li>present</li>
+        </Link>
+
+        <Link href="/gallery">
+          <li>gallery</li>
+        </Link>
+        <Link href="/association">
+          <li>association</li>
+        </Link>
+        <Link href="/publications">
+          <li>publications</li>
+        </Link>
       </ul>
-      <Link href="https://www.sydhavnenskvarteret.dk">Sydhavens Kvarteret</Link>
-      <Link href="https://www.sydhavnensfestival.dk">Sydhavens Festival</Link>
-      www.sammenomsydhaven.dk link to facebook, instagram possibility to do a
-      takeover. Skriv til sydhaven LinkedIn, BADGE: Connect people to district.
-      I am part of SydHaven. art, culture, creative business, social udsetter,
-      education, community, bevaelse: movement <p>anetacamo</p>
     </footer>
   );
 }

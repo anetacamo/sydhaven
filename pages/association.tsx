@@ -8,6 +8,7 @@ import StarsDivider from "../components/StarsDivider";
 import CardsList from "../components/CardsList/CardsList";
 import { DefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
 import SmallCard from "../components/SmallCard";
+import ImageSection from "../components/ImageSection/ImageSection";
 
 export async function getStaticProps() {
   // get files from the directory
@@ -44,12 +45,12 @@ const Association = ({ posts }: AssociationProps) => {
           <StarsDivider />
           <h1 style={{ maxWidth: 600, margin: "auto" }}>{title}</h1>
           <Paragraph>
-            Text about association, two types of membership, what does it do,
-            instagram takeover - The values - - Documents - Board of people -
-            How to be a member - how to be a sponsor
+            Text about association, become a member, join our events, takeover
+            instagram, send proposals, ask question, sign to newsletter
           </Paragraph>
           <StarsDivider />
         </section>
+        <ImageSection background="/14.jpeg" />
         <section className="bg-purple">
           <h2>Become a member</h2>
           <h4>Two types of memberships</h4>
@@ -62,7 +63,7 @@ const Association = ({ posts }: AssociationProps) => {
                 do, instagram takeover - The values - - Documents - Board of
                 people - How to be a member - how to be a sponsor
               </Paragraph>
-              <button>get it</button>
+              <button>interested?</button>
             </Card>
             <Card background="black">
               <h3>Second type of memebership</h3>
@@ -72,7 +73,7 @@ const Association = ({ posts }: AssociationProps) => {
                 do, instagram takeover - The values - - Documents - Board of
                 people - How to be a member - how to be a sponsor
               </Paragraph>
-              <button>get it</button>
+              <button>interested?</button>
             </Card>
 
             <Card background="pink">
@@ -83,13 +84,14 @@ const Association = ({ posts }: AssociationProps) => {
                 do, instagram takeover - The values - - Documents - Board of
                 people - How to be a member - how to be a sponsor
               </Paragraph>
-              <button>get it</button>
+              <button>interested?</button>
             </Card>
           </div>
           <Paragraph>
             If you have any alternative proposals for cooperation, questions or
             just want to say hi, let us know
           </Paragraph>
+          <h3>Other ways to contribute</h3>
           <div className="flex-center">
             <Card
               style={{ width: 640, height: 200, maxWidth: 640 }}

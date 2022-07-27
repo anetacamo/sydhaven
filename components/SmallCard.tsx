@@ -17,7 +17,7 @@ export default function SmallCard({
   const { image, type, title, address, link, text, opening } = post;
   return (
     <div className={`card small bg-${background} border-${bordercolor}`}>
-      <div style={{ padding: 8 }}>
+      {/* <div style={{ padding: 8 }}>
         <Image
           src={`/cards/${image}`}
           alt="blue"
@@ -26,23 +26,23 @@ export default function SmallCard({
           width={50}
           objectFit="contain"
         />
-      </div>
+      </div> */}
       <Link href={`/events/${slugify(title)}`}>
         <h4 style={{ marginBottom: "-8px", cursor: "pointer" }}>{title}</h4>
       </Link>
       <h5 className="bolded salmon">{address}</h5>
       {/* <h5>{text}</h5> */}
-      {opening && (
+      {/* {opening && (
         <h5>
           <span className="salmon bolded">open </span>
           {opening}
         </h5>
-      )}
-      {link && (
+      )} */}
+      {/* {link && (
         <h5 className="salmon underlined">
           <a href={link}>See homepage</a>
         </h5>
-      )}
+      )} */}
     </div>
   );
 }

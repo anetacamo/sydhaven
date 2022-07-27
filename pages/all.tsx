@@ -45,10 +45,14 @@ const All = ({ posts }: AllProps) => {
     const results = postsToRender.filter((post) =>
       searchQuery === "" ? true : post.frontmatter.title.includes(searchQuery)
     );
-    console.log(searchQuery);
-    console.log(results.map((post) => post.frontmatter.title));
     setBlogs(results);
   }, [searchQuery, category]);
+
+  const onCategorySet = (cat) => {
+    console.log(category);
+    const previousCategory = category;
+    previousCategory === cat ? setCategory([]) : setCategory(cat);
+  };
 
   return (
     <SinglePageLayout>
@@ -60,17 +64,27 @@ const All = ({ posts }: AllProps) => {
         />
         <div>
           <h5 style={{ marginBottom: 12 }}>Also part of Sydhaven?</h5>
-          <button className={styles.button}>+ Show yourself</button>
+          <button className={styles.button}>+ Add yourself</button>
         </div>
       </div>
       <h1 style={{ marginTop: 40 }}>Sydhaven Members</h1>
       {/*<TagsList posts={posts} />*/}
       <CategoryList
         posts={posts}
-        onTagClick={setCategory}
+        onTagClick={onCategorySet}
         category={category}
       />
+
       <div className={styles.listContainer}>
+        <h4>
+          showing all <span className="pink">{category}</span>
+          {searchQuery && (
+            <>
+              {" "}
+              including <span className="pink">{searchQuery}</span>
+            </>
+          )}
+        </h4>
         {blogs.map((post, index) => (
           <ListDisplay key={index} post={post} />
         ))}

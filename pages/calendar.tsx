@@ -4,9 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import path from "path";
 import CardsList from "../components/CardsList/CardsList";
+import ImageSection from "../components/ImageSection/ImageSection";
 import Paragraph from "../components/Paragraph/Paragraph";
 import StarsDivider from "../components/StarsDivider";
-import { SinglePageLayout } from "../layouts/SinglePageLayout/SinglePageLayout";
+import { SimpleLayout } from "../layouts/SimpleLayout/SimpleLayout";
 import { slugify } from "../utils/slugify";
 
 export async function getStaticProps() {
@@ -37,23 +38,23 @@ interface CalendarProps {
 
 const Calendar = ({ posts }: CalendarProps) => {
   const title = "Calendar";
-  posts.map((post) => {
-    console.log(post.frontmatter.type);
-  });
   return (
-    <SinglePageLayout title={title}>
-      <>
-        <Paragraph>
-          Some of the upcoming events. This is not an exhaustive list. To see
-          the exact date and all sorts of upcoming activities, check the
-          facebook site of{" "}
-          <a href="https://www.facebook.com/groups/154685458042586/events">
-            Sydhaven
-          </a>{" "}
-          or look through our members and check their homepages.
-        </Paragraph>
-        <StarsDivider />
-
+    <SimpleLayout>
+      <ImageSection background="/20.jpeg">
+        <div style={{ color: "white", maxWidth: 600, paddingTop: 280 }}>
+          <h1>Calendar</h1>
+          <p>
+            Some of the upcoming events. This is not an exhaustive list. To see
+            the exact date and all sorts of upcoming activities, check the
+            facebook site of{" "}
+            <a href="https://www.facebook.com/groups/154685458042586/events">
+              Sydhaven
+            </a>{" "}
+            or look through our members and check their homepages.
+          </p>
+        </div>
+      </ImageSection>
+      <section className="bg-black">
         <div className="flex-center" style={{ alignItems: "unset" }}>
           {posts.map((post, index) => (
             <>
@@ -69,8 +70,8 @@ const Calendar = ({ posts }: CalendarProps) => {
             </>
           ))}
         </div>
-      </>
-    </SinglePageLayout>
+      </section>
+    </SimpleLayout>
   );
 };
 

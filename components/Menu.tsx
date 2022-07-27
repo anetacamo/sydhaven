@@ -11,8 +11,18 @@ export default function Menu() {
           <li>map</li>
         </Link>
         <Link href="/calendar">
-          <li>calendar</li>
+          <li>coming up</li>
         </Link>
+        <Link href="/all">
+          <li>members</li>
+        </Link>
+        <Link href="/about">
+          <li>about</li>
+        </Link>
+        <Link href="/association">
+          <li>association</li>
+        </Link>
+
         {/*}
         <Link href="/gallery">
           <li>history___</li>
@@ -20,7 +30,7 @@ export default function Menu() {
         <Link href="/gallery">
           <li>present___</li>
   </Link>*/}
-        <Link href="/vision">
+        {/* <Link href="/vision">
           <li>vision</li>
         </Link>
         <Link href="/gallery">
@@ -34,7 +44,7 @@ export default function Menu() {
         </Link>
         <Link href="/all">
           <li>members</li>
-        </Link>
+        </Link> */}
       </ul>
       <p>da / en</p>
     </nav>

@@ -7,6 +7,8 @@ import StarsDivider from "../components/StarsDivider";
 import TagsList from "../components/TagsList";
 import { DefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
 import Image from "next/image";
+import Intro from "../components/Intro/Intro";
+import ImageSection from "../components/ImageSection/ImageSection";
 
 export async function getStaticProps() {
   // get files from the directory
@@ -38,24 +40,8 @@ export default function Home({ posts }: HomeProps) {
   const title = "Home";
   return (
     <DefaultLayout title={title}>
-      <section
-        className="grid center"
-        style={{
-          minHeight: "30vh",
-          padding: "160px 0",
-          backgroundImage: "/20.jpeg",
-        }}
-      >
-        <StarsDivider />
+      <Intro background="/14.jpeg" />
 
-        <h4 style={{ maxWidth: 800, margin: "auto", fontSize: 40 }}>
-          <span className="purple">South Harbour</span> is an area in Aarhus
-          west. To see the exact date and all sorts of upcoming activities,
-          check the facebook site of
-        </h4>
-
-        <StarsDivider />
-      </section>
       <section className="grid center">
         <h2>Who makes South Harbour</h2>
         <Paragraph>
@@ -96,26 +82,28 @@ export default function Home({ posts }: HomeProps) {
         </div>
       </section>
 
-      <section className="bg-salmon center">
-        <h2>Vision and values</h2>
-        <h4>
-          Hold in Frontloberne. Check website for the upcoming events. Link
-        </h4>
-        <p style={{ maxWidth: 800, margin: "12px auto" }}>
-          Each one teach one is a series of small workshops organised by anybody
-          who has anything to bring to the table. The idea behind is that each
-          of us has a skill or know-how that many of us could benefit from
-          learning. Hold in Frontloberne. Check website for the upcoming events.
-          Link.
-        </p>
-        <button>Read more</button>
+      <section className="bg-pink">
+        <div style={{ maxWidth: 1200, margin: "auto" }}>
+          <h2>Vision & values</h2>
+          <p style={{ fontSize: 20, maxWidth: 800 }}>
+            Each one teach one is a series of small workshops organised by
+            anybody who has anything to bring to the table. The idea behind is
+            that each of us has a skill or know-how that many of us could
+            benefit from learning. Hold in Frontloberne. Check website for the
+            upcoming events. Link.
+          </p>
+          <p>see all the memmbers</p>
+          <button>Read more</button>
+        </div>
       </section>
-
+      <ImageSection background="/20.jpeg" />
       <section className="bg-red center">
         <h2>Open for Public</h2>
         <Paragraph>
-          To see the exact date and all sorts of upcoming activities, check the
-          facebook site of{" "}
+          Many places that offer different creative workshops, curses, cultural
+          events, provide a space for connecting or developing one's skills or
+          simply just having a chat. To see the exact date and all sorts of
+          upcoming activities, check the facebook site of{" "}
           <a href="https://www.facebook.com/groups/154685458042586/events">
             Sydhaven
           </a>{" "}
@@ -125,23 +113,37 @@ export default function Home({ posts }: HomeProps) {
         <CardsList posts={posts} opening="present" background="gray" />
       </section>
 
-      <section className="bg-gray center">
-        <h2>Community & Sustainability</h2>
-        <Paragraph>
-          To see the exact date and all sorts of upcoming activities, check the
-          facebook site of Sydhaven or click any of the specific links.
-        </Paragraph>
-        <StarsDivider />
-        <CardsList posts={posts} tag="community" />
+      <section className="bg-pink">
+        <div className="flex-center" style={{ maxWidth: 1400, margin: "auto" }}>
+          <div style={{ textAlign: "right", maxWidth: "50%" }}>
+            <h2>Community & Sustainability</h2>
+            <p>
+              Due to placement at the border of very noisy industrial
+              neighbourhood and city center, Sydhaven is also an important place
+              where many initiatives that may not be able to survive elsewhere
+              are located. recycle and redistribute, trying to make a
+              difference, help vulnerable communities and collect and
+              redistribute resources in more sustainable way
+            </p>
+            <StarsDivider />
+          </div>
+          <div style={{ maxWidth: "50%" }}>
+            <CardsList posts={posts} tag="community" />
+          </div>
+        </div>
       </section>
-
-      <section className="bg-red center">
+      <ImageSection background="/9.jpeg" />
+      <section className="bg-red center" style={{ paddingBottom: 120 }}>
+        <h4 className="purple">creative business</h4>
         <h2>Culture Makers & Value Creators</h2>
         <Paragraph>
-          To see the exact date and all sorts of upcoming activities, check the
-          facebook site of Sydhaven. or click any of the following links
+          Sydhaven is home to many social and creative initiatives or platform
+          that are trying to help young & creative people to become connected,
+          develop their skills and inspire each other. Often centered around
+          meaningful activities and purposes.
         </Paragraph>
         <StarsDivider />
+
         <CardsList posts={posts} tag="event makers" background="purple" />
       </section>
     </DefaultLayout>
