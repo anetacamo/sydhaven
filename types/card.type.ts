@@ -1,5 +1,5 @@
 type CardType = {
-  frontmatter: any;
+  frontmatter?: any;
   title?: string;
   text?: string;
   background?: string;
