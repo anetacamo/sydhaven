@@ -50,7 +50,6 @@ const All = ({ posts }: AllProps) => {
   }, [searchQuery, category]);
 
   const onCategorySet = (cat: string) => {
-    console.log(category);
     const previousCategory = category;
     previousCategory === cat ? setCategory([]) : setCategory(cat);
   };
@@ -76,6 +75,7 @@ const All = ({ posts }: AllProps) => {
         category={category}
       />
 
+      <div></div>
       <div className={styles.listContainer}>
         <h4>
           showing all <span className="pink">{category}</span>

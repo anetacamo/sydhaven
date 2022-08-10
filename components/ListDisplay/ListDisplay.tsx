@@ -15,6 +15,9 @@ const ListDisplay = ({ post }: ListDisplayProps) => {
     <div
       className={styles.listContainer}
       onClick={() => setExtended(!extended)}
+      tabIndex={0}
+      onKeyPress={() => setExtended(!extended)}
+      role="button"
     >
       <div className={`flex-center ${styles.flexName}`}>
         <div>

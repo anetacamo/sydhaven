@@ -26,7 +26,6 @@ nav {
     }
   }
 }
-
 nav {
   border-bottom: 2px solid $menu-border-color;
 }
@@ -36,4 +35,6 @@ footer {
   position: fixed;
   bottom: 0;
   width: calc(100% - 4rem);
+  min-height: 30px;
+  transition: 350ms ease-in;
 }

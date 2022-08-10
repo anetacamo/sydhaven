@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { ReactNode } from "react";
-import Footer from "../../components/Footer";
-import Menu from "../../components/Menu";
+import Footer from "../../components/Footer/Footer";
+import Menu from "../../components/Menu/Menu";
 
 interface LayoutProps {
   title?: string;
@@ -17,7 +17,7 @@ export const SimpleLayout = ({ children, title }: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />
-      {children}
+      <div id="content">{children}</div>
       <Footer />
     </>
   );

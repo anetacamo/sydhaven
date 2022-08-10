@@ -1,0 +1,13 @@
+.open {
+  min-height: calc(100vh - 4rem);
+  background-color: blueviolet;
+  padding: 2rem;
+  transition: 350ms ease-in;
+  display: block;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { ReactNode } from "react";
-import Footer from "../../components/Footer";
-import Menu from "../../components/Menu";
+import Footer from "../../components/Footer/Footer";
+import Menu from "../../components/Menu/Menu";
 import LeftMenu from "../../components/LeftMenu/LeftMenu";
 
 interface LayoutProps {
@@ -19,7 +19,7 @@ export const DefaultLayout = ({ children, title }: LayoutProps) => {
       </Head>
       <LeftMenu items={["map"]} />
       <Menu />
-      {children}
+      <div id="content">{children}</div>
       <Footer />
     </>
   );

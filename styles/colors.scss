@@ -45,8 +45,17 @@ $colors: "pink", "salmon", "yellow", "blue", "purple", "purplelight", "black",
 
 .bg-black,
 .bg-blue,
+.bg-purple,
 .bg-pink {
   color: white;
+}
+.bg-pink {
+  color: white;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+}
+
+.bg-white {
+  //background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
 }
 
 .bg-yellow,

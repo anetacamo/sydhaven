@@ -7,6 +7,11 @@
   flex-wrap: wrap;
   align-items: center;
 }
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
 
 .center {
   text-align: center;
@@ -25,4 +30,70 @@
 
 .hidden {
   display: none;
+}
+
+input[type="checkbox"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.checkbox,
+.input {
+  display: inline-block; // set to `inline-block` as `inline elements ignore `height` and `width`
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border: 2px #ddd solid;
+  margin-right: 4px;
+}
+
+.checkbox--active,
+.input--active {
+  border-color: purple;
+  background: purple;
+}
+
+.map-canvas {
+  height: calc(100vh - 220px);
+  width: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(1);
+  position: relative;
+  background-image: url("/map2.png");
+  .point {
+    height: 40px;
+    filter: invert(1);
+    width: 40px;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .title {
+    width: 0;
+    opacity: 0;
+    &.opened {
+      transition-duration: 350ms;
+      padding: 3px 6px;
+      margin-left: 3px;
+      width: auto;
+      opacity: 1;
+    }
+  }
+  .icon {
+    width: 26px;
+    height: 26px;
+    padding: 8px;
+    filter: invert(1);
+    background-size: contain;
+  }
 }

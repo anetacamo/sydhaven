@@ -89,8 +89,9 @@ const Association = ({ posts }: AssociationProps) => {
           </div>
           <Paragraph>
             If you have any alternative proposals for cooperation, questions or
-            just want to say hi, let us know
+            just want to say hi
           </Paragraph>
+          <button>let us know</button>
           <h3>Other ways to contribute</h3>
           <div className="flex-center">
             <Card

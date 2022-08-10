@@ -1,0 +1,16 @@
+.column {
+  max-width: 25%;
+  padding-right: 32px;
+  min-width: 300px;
+}
+
+.li {
+  margin: 16px 0;
+  font-size: 18px;
+  padding-left: 0;
+  line-height: 1;
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}

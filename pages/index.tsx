@@ -6,7 +6,6 @@ import Paragraph from "../components/Paragraph/Paragraph";
 import StarsDivider from "../components/StarsDivider";
 import TagsList from "../components/TagsList";
 import { DefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
-import Image from "next/image";
 import Intro from "../components/Intro/Intro";
 import ImageSection from "../components/ImageSection/ImageSection";
 
@@ -54,18 +53,27 @@ export default function Home({ posts }: HomeProps) {
       </section>
 
       <section className="bg-black center">
-        <h2>Calendar</h2>
-        <Paragraph>
-          To see the exact date and all sorts of upcoming activities, check the
-          facebook site of{" "}
-          <a href="https://www.facebook.com/groups/154685458042586/events">
-            Sydhaven
-          </a>{" "}
-          or click any of the place links
+        <h3 className="purple">coming up next</h3>
+        <h2
+          style={{ fontSize: 54, lineHeight: 1, maxWidth: 900, margin: "auto" }}
+        >
+          Sydhavnens <br />
+          festival 2022
+        </h2>
+        <h2 style={{ fontSize: 54 }} className="pink">
+          20. - 22.8.
+        </h2>
+        <button>read more</button>
+        {/* <Paragraph>
+          To see more of upcoming activities, check the facebook site of
+          Sydhavnen
         </Paragraph>
-        <StarsDivider />
+        <a href="https://www.facebook.com/groups/154685458042586/events">
+          <button>more events</button>
+        </a> */}
+        {/* <StarsDivider /> */}
         {/*<CardsList posts={posts} type="event" />*/}
-        <div className="flex-center" style={{ alignItems: "unset" }}>
+        {/* <div className="flex-center" style={{ alignItems: "unset" }}>
           {posts.map((post, index) => (
             <>
               {post.frontmatter.type == "event" && (
@@ -79,7 +87,7 @@ export default function Home({ posts }: HomeProps) {
               )}{" "}
             </>
           ))}
-        </div>
+        </div> */}
       </section>
 
       <section className="bg-pink">
@@ -100,14 +108,15 @@ export default function Home({ posts }: HomeProps) {
       <section className="bg-red center">
         <h2>Open for Public</h2>
         <Paragraph>
-          Many places that offer different creative workshops, curses, cultural
-          events, provide a space for connecting or developing ones skills or
-          simply just having a chat. To see the exact date and all sorts of
-          upcoming activities, check the facebook site of{" "}
+          Many initiatives in Sydhaven offer different creative workshops open
+          for public some of them free of charge, courses, cultural events,
+          provide a space for connecting or developing one's skills or simply
+          just having a chat. To see the exact date and all sorts of upcoming
+          activities, check the facebook site of{" "}
           <a href="https://www.facebook.com/groups/154685458042586/events">
             Sydhaven
           </a>{" "}
-          or click any of the place links
+          or browse the list of members
         </Paragraph>
         <StarsDivider />
         <CardsList posts={posts} opening="present" background="gray" />
