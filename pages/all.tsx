@@ -1,4 +1,4 @@
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";

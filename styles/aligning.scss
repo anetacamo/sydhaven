@@ -76,17 +76,22 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     cursor: pointer;
+    &:hover {
+      z-index: 3;
+      transition-duration: 150ms;
+    }
   }
 
   .title {
     width: 0;
     opacity: 0;
     &.opened {
-      transition-duration: 350ms;
+      transition-duration: 150ms;
       padding: 3px 6px;
       margin-left: 3px;
       width: auto;
       opacity: 1;
+      z-index: 3;
     }
   }
   .icon {
