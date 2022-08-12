@@ -110,7 +110,7 @@ export default function Home({ posts }: HomeProps) {
         <Paragraph>
           Many initiatives in Sydhaven offer different creative workshops open
           for public some of them free of charge, courses, cultural events,
-          provide a space for connecting or developing one's skills or simply
+          provide a space for connecting or developing ones skills or simply
           just having a chat. To see the exact date and all sorts of upcoming
           activities, check the facebook site of{" "}
           <a href="https://www.facebook.com/groups/154685458042586/events">
