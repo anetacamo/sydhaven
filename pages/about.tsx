@@ -8,7 +8,7 @@ const About = () => {
   return (
     <>
       <SimpleLayout title={title} />
-      <LeftMenu items={["history", "presence"]} />
+
       <ImageSection background="/20.jpeg" />
       <div className="flex">
         <div

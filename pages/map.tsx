@@ -97,7 +97,7 @@ const Map = ({ posts }: AllProps) => {
           {places.map((place) => (
             <div
               key={place.title}
-              className={`point bg-${categoryColors[place.category]}`}
+              className={`point bg-purple`}
               onClick={() => setView(place.title)}
               onMouseEnter={() => setName(place.title)}
               style={{ top: place.top, left: place.left }}
@@ -108,9 +108,12 @@ const Map = ({ posts }: AllProps) => {
                 className={`icon`}
               />
               <div
-                className={`title bg-${categoryColors[place.category]} ${
+                className={`title bg-purple ${
                   name === place.title ? "opened" : ""
                 }`}
+                // className={`title bg-${categoryColors[place.category]} ${
+                //   name === place.title ? "opened" : ""
+                // }`}
               >
                 {name === place.title ? name : ""}
               </div>
