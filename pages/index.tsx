@@ -8,6 +8,8 @@ import TagsList from "../components/TagsList";
 import { DefaultLayout } from "../layouts/DefaultLayout/DefaultLayout";
 import Intro from "../components/Intro/Intro";
 import ImageSection from "../components/ImageSection/ImageSection";
+import CategoryList from "../components/CategoryList";
+import Link from "next/link";
 
 export async function getStaticProps() {
   // get files from the directory
@@ -43,13 +45,18 @@ export default function Home({ posts }: HomeProps) {
 
       <section className="center">
         <h2>Who makes South Harbour</h2>
+
         <Paragraph>
           To see the exact date and all sorts of upcoming activities, check the
           facebook site of or click any of the place links
         </Paragraph>
-        <TagsList posts={posts} />
+        <br />
+        {/* <CategoryList posts={posts} /> */}
+        {/* <TagsList posts={posts} /> */}
         <CardsList posts={posts} regular type="main" background="gray" main />
-        <button>& Many More</button>
+        <Link href="/members">
+          <button>members</button>
+        </Link>
       </section>
 
       <section className="bg-black center">
@@ -63,7 +70,10 @@ export default function Home({ posts }: HomeProps) {
         <h2 style={{ fontSize: 54 }} className="pink">
           20. - 22.8.
         </h2>
-        <button>read more</button>
+        <a href="https://www.facebook.com/events/1379108515836403">
+          <button>facebook event</button>
+        </a>
+
         {/* <Paragraph>
           To see more of upcoming activities, check the facebook site of
           Sydhavnen
