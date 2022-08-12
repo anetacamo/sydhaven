@@ -8,6 +8,8 @@ import { SimpleLayout } from "../layouts/SimpleLayout/SimpleLayout";
 import { categoryColors } from "../types/colors.type";
 
 import Post from "../types/card.type";
+import Card from "../components/Card";
+import ImageSection from "../components/ImageSection/ImageSection";
 
 export async function getStaticProps() {
   // get files from the directory
@@ -40,48 +42,53 @@ const Map = ({ posts }: AllProps) => {
   const [view, setView] = useState("");
   const places = [
     {
-      title: "frontloberne",
+      title: "Frontloberne",
       top: "50%",
       left: "38%",
-      image: "bike",
+      image: "frontloberne",
       category: "movement",
     },
     {
-      title: "knuds kiosk",
+      title: "KnudsKiosk",
       top: "58%",
       left: "34%",
-      image: "stars",
+      image: "bike",
       category: "studio",
     },
     {
-      title: "useStudio",
+      title: "UseStudio",
       top: "34%",
       left: "48%",
       image: "star",
       category: "studio",
     },
     {
-      title: "kaospilots",
+      title: "Kaospilots",
       top: "38%",
       left: "48%",
-      image: "bike",
+      image: "star2",
       category: "movement",
     },
     {
-      title: "permasport",
+      title: "Permasport",
       top: "55%",
       left: "55%",
       image: "bike",
       category: "movement",
     },
     {
-      title: "cafe stoj",
+      title: "Cafe Stoj",
       top: "47%",
       left: "29%",
-      image: "stars",
+      image: "coffee",
       category: "shop",
     },
   ];
+
+  const clicked = posts.filter((place) => place.frontmatter.title === view);
+  console.log(posts.map((post) => post.frontmatter.title));
+  console.log(view);
+  console.log(clicked);
 
   return (
     <SimpleLayout>
@@ -110,8 +117,15 @@ const Map = ({ posts }: AllProps) => {
             </div>
           ))}
         </div>
-        <div>
-          <h2>{view}</h2>
+        <div style={{ width: "100%" }}>
+          <div style={{ padding: 24 }}>
+            <p className="type bg-purple" style={{ marginTop: 32 }}>
+              {clicked[0]?.frontmatter.type}
+            </p>
+            <h2>{clicked[0]?.frontmatter.title}</h2>
+            <p style={{ marginTop: -24 }}>{clicked[0]?.frontmatter.address}</p>
+            <p style={{ maxWidth: 600 }}>{clicked[0]?.frontmatter.text}</p>
+          </div>
         </div>
       </div>
     </SimpleLayout>

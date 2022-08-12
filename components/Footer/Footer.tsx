@@ -12,7 +12,7 @@ export default function Footer() {
 
       {!open && (
         <ul className="flex">
-          {" "}
+          {/* {" "}
           <Link href="/vision">
             <li>vision</li>
           </Link>
@@ -30,7 +30,7 @@ export default function Footer() {
           </Link>
           <Link href="/publications">
             <li>publications</li>
-          </Link>
+          </Link> */}
         </ul>
       )}
 

@@ -1,5 +1,5 @@
 ---
-type: fundrising platform
+type: community
 title: Aarhus Soup
 tags: [education, workshop, event makers, culture, funding]
 image: stars.png

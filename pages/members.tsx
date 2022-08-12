@@ -62,10 +62,11 @@ const All = ({ posts }: AllProps) => {
           placeholder="search"
           onChange={(e) => setSearchQuery(e.target.value)}
         />
-        <div>
+
+        {/* <div>
           <h5 style={{ marginBottom: 12 }}>Also part of Sydhaven?</h5>
           <button className={styles.button}>+ Add yourself</button>
-        </div>
+        </div> */}
       </div>
       <h1 style={{ marginTop: 40 }}>Sydhaven Members</h1>
       {/*<TagsList posts={posts} />*/}

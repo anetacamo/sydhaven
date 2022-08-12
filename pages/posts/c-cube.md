@@ -1,5 +1,5 @@
 ---
-type: platform
+type: community
 title: C-Cube
 tags: [event makers, workshop, podcast]
 image: stars.png

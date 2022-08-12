@@ -4,10 +4,11 @@
   padding: 2rem;
   transition: 350ms ease-in;
   display: block;
+  flex-direction: column;
 }
 
 .footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: space-between;
 }

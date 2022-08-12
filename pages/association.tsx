@@ -87,6 +87,10 @@ const Association = ({ posts }: AssociationProps) => {
               <button>interested?</button>
             </Card>
           </div>
+          <br />
+          <br />
+          <br />
+          <br />
           <Paragraph>
             If you have any alternative proposals for cooperation, questions or
             just want to say hi
@@ -104,11 +108,11 @@ const Association = ({ posts }: AssociationProps) => {
                 do, instagram takeover - The values - - Documents - Board of
                 people - How to be a member - how to be a sponsor
               </Paragraph>
-              <button style={{ marginTop: 12 }}>get it</button>
+              <button style={{ marginTop: 12 }}>write us</button>
             </Card>
           </div>
         </section>
-        <section className="bg-black">
+        {/* <section className="bg-black">
           <h2>Sydhavens Documents</h2>
           <Paragraph>
             Text about assosiation, two types of membership, what does it do,
@@ -135,8 +139,8 @@ const Association = ({ posts }: AssociationProps) => {
               </a>
             </li>
           </ul>
-        </section>
-        <section className="bg-pink">
+        </section> */}
+        {/* <section className="bg-pink">
           <h3 className="purple">open events</h3>
           <h2>Get to know South Harbour live</h2>
 
@@ -154,8 +158,8 @@ const Association = ({ posts }: AssociationProps) => {
               <FaArrowRight />
             </div>
           </button>
-        </section>
-        <section className="bg-gray" style={{ color: "black" }}>
+        </section> */}
+        {/* <section className="bg-gray" style={{ color: "black" }}>
           <h2>Newsletter</h2>
           <Paragraph>
             South Harbour is main organiser of South Harbour festival that
@@ -173,9 +177,7 @@ const Association = ({ posts }: AssociationProps) => {
               <FaArrowRight />
             </div>
           </button>
-        </section>
-        2 events every year Festival, meet your member Info and booking for the
-        tours. Mail for now. Billeto link. Newsletter
+        </section> */}
       </div>
     </DefaultLayout>
   );

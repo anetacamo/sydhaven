@@ -41,7 +41,7 @@ export default function Home({ posts }: HomeProps) {
     <DefaultLayout title={title}>
       <Intro background="/14.jpeg" />
 
-      <section className="grid center">
+      <section className="center">
         <h2>Who makes South Harbour</h2>
         <Paragraph>
           To see the exact date and all sorts of upcoming activities, check the
