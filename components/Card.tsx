@@ -38,16 +38,16 @@ export default function Card({
       )}
       {post?.type && <h4 className='type bg-purple'>{post?.type}</h4>}
       {post?.title && (
-        <Link href={`/events/${slugify(post?.title)}`}>
-          <h4
-            style={{
-              marginBottom: '-8px',
-              cursor: 'pointer',
-            }}
-          >
-            {post?.title}
-          </h4>
-        </Link>
+        //<Link href={`/events/${slugify(post?.title)}`}>
+        <h4
+          style={{
+            marginBottom: '-8px',
+            cursor: 'pointer',
+          }}
+        >
+          {post?.title}
+        </h4>
+        // </Link>
       )}
       {post?.address && <h5 className='bolded purple'>{post?.address}</h5>}
       {post?.address && <h5>{post?.text}</h5>}

@@ -28,18 +28,16 @@ input {
   padding: 12px 32px;
   padding-bottom: 10px;
   letter-spacing: 4px;
-  border-radius: 4px;
   text-transform: uppercase;
   color: white;
   font-size: 12px;
   border-style: none;
-  font-family: "Violet Sans";
+  font-family: 'Violet Sans';
   box-shadow: 3px 3px 0px $purple;
   border: 2px solid black;
   cursor: pointer;
   &:hover {
-    background-color: $salmon;
-    color: black;
+    color: $yellow;
     transition-duration: 350ms;
   }
   svg {

@@ -3,6 +3,7 @@
     "text": "South Harbour is an area in Aarhus west. To see the exact date and all sorts of upcoming activities, check the facebook site of"
   },
   "members": {
+    "subtitle": "",
     "title": "sydhaven landmarks",
     "text": "South Harbour is an area in Aarhus west. To see the exact date and all sorts of upcoming activities, check the facebook site of",
     "button": "See all members"
@@ -34,6 +35,7 @@
   "third": {
     "subtitle": "Creative businesses",
     "title": "Culture makers & value creators",
-    "text": "Sydhaven is home to many social and creative initiatives or platform that are trying to help young & creative people to become connected, develop their skills and inspire each other. Often centered around meaningful activities and purposes"
+    "text": "Sydhaven is home to many social and creative initiatives or platform that are trying to help young & creative people to become connected, develop their skills and inspire each other. Often centered around meaningful activities and purposes",
+    "button": ""
   }
 }
