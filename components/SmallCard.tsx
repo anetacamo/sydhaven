@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { slugify } from "../utils/slugify";
-import Link from "next/link";
-import CardType from "../types/card.type";
+import Image from 'next/image';
+import { slugify } from '../utils/slugify';
+import Link from 'next/link';
+import CardType from '../types/card.type';
 
 interface CardProps extends CardType {
   background?: string;
@@ -28,10 +28,10 @@ export default function SmallCard({
         />
       </div> */}
       <Link href={`/events/${slugify(title)}`}>
-        <h4 style={{ marginBottom: "-8px", cursor: "pointer" }}>{title}</h4>
+        <h4 style={{ marginBottom: '-8px', cursor: 'pointer' }}>{title}</h4>
       </Link>
-      <h5 className="bolded salmon">{address}</h5>
-      {/* <h5>{text}</h5> */}
+      <h5 className='bolded salmon'>{address}</h5>
+      {/* <h5 style={{ fontSize: 12 }}>{text}</h5> */}
       {/* {opening && (
         <h5>
           <span className="salmon bolded">open </span>

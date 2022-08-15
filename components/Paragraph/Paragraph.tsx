@@ -1,13 +1,18 @@
-import styles from "./Paragraph.module.scss";
+import styles from './Paragraph.module.scss';
 
 interface ParagraphProps {
   children: React.ReactNode;
-  level?: number;
+  size?: string;
+  left?: boolean;
 }
 
-export default function Paragraph({ children, level }: ParagraphProps) {
+export default function Paragraph({ children, size, left }: ParagraphProps) {
   return (
-    <p className={`${styles.paragraph} ${level && "level" + level}`}>
+    <p
+      className={`large ${styles.paragraph} ${size && styles.large} ${
+        left && styles.left
+      }`}
+    >
       {children}
     </p>
   );

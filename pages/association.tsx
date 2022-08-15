@@ -81,7 +81,7 @@ const Association = ({ posts }: AssociationProps) => {
           </div>
         </section>
 
-        {/* <section className="bg-black">
+        {/* <section className='bg-black'>
           <h2>Sydhavens Documents</h2>
           <Paragraph>
             Text about assosiation, two types of membership, what does it do,
@@ -89,30 +89,29 @@ const Association = ({ posts }: AssociationProps) => {
             How to be a member - how to be a sponsor
           </Paragraph>
           <ul>
-            <li className="flex-center" style={{ paddingTop: 16 }}>
+            <li className='flex-center' style={{ paddingTop: 16 }}>
               <FaArrowDown />
-              <a className="underlined" style={{ paddingLeft: 8 }}>
+              <a className='underlined' style={{ paddingLeft: 8 }}>
                 Document name download
               </a>
             </li>
-            <li className="flex-center" style={{ paddingTop: 8 }}>
+            <li className='flex-center' style={{ paddingTop: 8 }}>
               <FaArrowDown />
-              <a className="underlined" style={{ paddingLeft: 8 }}>
+              <a className='underlined' style={{ paddingLeft: 8 }}>
                 Document name download
               </a>
             </li>
-            <li className="flex-center" style={{ paddingTop: 8 }}>
+            <li className='flex-center' style={{ paddingTop: 8 }}>
               <FaArrowDown />
-              <a className="underlined" style={{ paddingLeft: 8 }}>
+              <a className='underlined' style={{ paddingLeft: 8 }}>
                 Document name download
               </a>
             </li>
           </ul>
         </section> */}
-        {/* <section className="bg-pink">
-          <h3 className="purple">open events</h3>
+        {/* <section className='bg-pink'>
+          <h3 className='purple'>open events</h3>
           <h2>Get to know South Harbour live</h2>
-
           <Paragraph>
             South Harbour is main organiser of South Harbour festival that
             happens every year. 2 events every year Festival, meet your member
@@ -120,9 +119,10 @@ const Association = ({ posts }: AssociationProps) => {
             Newsletter
           </Paragraph>
           <StarsDivider />
-          <CardsList posts={posts} sydhaven={true} />
-          <button>
-            <div className="flex-center">
+
+          {/* <CardsList posts={posts} sydhaven={true} /> */}
+        {/* <button>
+            <div className='flex-center'>
               <span style={{ paddingRight: 8, paddingTop: 3 }}>Contact us</span>
               <FaArrowRight />
             </div>

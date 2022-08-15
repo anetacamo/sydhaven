@@ -43,7 +43,9 @@ export default function Home({ posts }: HomeProps) {
   const title = 'Home';
   return (
     <DefaultLayout title={title}>
-      <Intro background='/14.jpeg' />
+      <ImageSection background='/14.jpeg' overlay full>
+        <Paragraph size='large'>{sections.intro.text}</Paragraph>
+      </ImageSection>
 
       <section className='center'>
         <h2>{sections.members.title}</h2>
@@ -96,11 +98,11 @@ export default function Home({ posts }: HomeProps) {
       <section className='bg-pink'>
         <div style={{ maxWidth: 1200, margin: 'auto' }}>
           <h2>{sections.values.title}</h2>
-          <p className='large' style={{ maxWidth: 800 }}>
-            {sections.values.text}
-          </p>
+          <Paragraph left>{sections.values.text}</Paragraph>
           <p>see all the memmbers</p>
-          <button>{sections.values.button}</button>
+          <Link href='/members'>
+            <button>{sections.values.button}</button>
+          </Link>
         </div>
       </section>
 
@@ -129,7 +131,7 @@ export default function Home({ posts }: HomeProps) {
       <ImageSection background='/9.jpeg' />
 
       <section className='bg-red center' style={{ paddingBottom: 120 }}>
-        <h4 className='purple'>{sections.third.subtitle}</h4>
+        <h3 className='purple'>{sections.third.subtitle}</h3>
         <h2>{sections.third.title}</h2>
         <Paragraph>{sections.third.text}</Paragraph>
         <StarsDivider />
