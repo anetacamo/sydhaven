@@ -30,8 +30,8 @@ const About = () => {
               {sections.history.title}
             </h3>
             <Paragraph size='large'>{sections.history.text}</Paragraph>
-            {sections.history.paragraphs.map((p) => (
-              <p>{p}</p>
+            {sections.history.paragraphs.map((p, index) => (
+              <p key={index}>{p}</p>
             ))}
           </div>
           <ImageSection background='/14.jpeg' />
@@ -52,8 +52,8 @@ const About = () => {
               {sections.present.title}
             </h3>
             <Paragraph size='large'>{sections.present.text}</Paragraph>
-            {sections.present.paragraphs.map((p) => (
-              <p>{p}</p>
+            {sections.present.paragraphs.map((p, index) => (
+              <p key={index}>{p}</p>
             ))}
           </div>
           <ImageSection background='/9.jpeg' />
