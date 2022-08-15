@@ -44,7 +44,9 @@ export default function Home({ posts }: HomeProps) {
   return (
     <DefaultLayout title={title}>
       <ImageSection background='/14.jpeg' overlay full>
-        <Paragraph size='large'>{sections.intro.text}</Paragraph>
+        <h1 style={{ textTransform: 'none', maxWidth: 800, margin: 'auto' }}>
+          {sections.intro.text}
+        </h1>
       </ImageSection>
 
       <section className='center'>
@@ -62,9 +64,7 @@ export default function Home({ posts }: HomeProps) {
       <section className='bg-black center'>
         <h3 className='purple'>{sections.next.subtitle}</h3>
         <h2 className={styles.largeTitle}>{sections.next.title}</h2>
-        <h2 style={{ fontSize: 54 }} className='pink'>
-          {sections.next.date}
-        </h2>
+        <h2>{sections.next.date}</h2>
         <a href='https://www.facebook.com/events/1379108515836403'>
           <button>{sections.next.button}</button>
         </a>

@@ -1,5 +1,5 @@
-{
-  "history": {
+[
+  {
     "title": "history",
     "text": "Text about association, become a member, join our events, takeover instagram, send proposals, ask question, sign to newsletter",
     "paragraphs": [
@@ -9,7 +9,7 @@
     ],
     "button": "hi"
   },
-  "present": {
+  {
     "title": "present",
     "text": "Text about association, become a member, join our events, takeover instagram, send proposals, ask question, sign to newsletter",
     "paragraphs": [
@@ -19,7 +19,7 @@
     ],
     "button": ""
   },
-  "vision": {
+  {
     "title": "vision",
     "text": "Text about association, become a member, join our events, takeover instagram, send proposals, ask question, sign to newsletter",
     "paragraphs": [
@@ -30,4 +30,4 @@
     ],
     "button": ""
   }
-}
+]

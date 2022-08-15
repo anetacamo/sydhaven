@@ -5,10 +5,11 @@
   transition: 350ms ease-in;
   display: block;
   flex-direction: column;
+  z-index: 4;
 }
 
 .footer {
   display: flex;
-  flex-direction: row;
+  //flex-direction: row;
   align-content: space-between;
 }

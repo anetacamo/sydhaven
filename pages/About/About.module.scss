@@ -13,10 +13,35 @@
 
 .section {
   transition: 350ms ease-in-out;
+  min-width: 80px;
+  @media (max-width: 700px) {
+    min-width: 40px;
+  }
+  &:first-of-type {
+    text-align: right;
+    margin-right: 0;
+    background-color: black;
+    color: white;
+  }
+  &:nth-of-type(3) {
+    text-align: right;
+    margin-right: 0;
+    background-color: blueviolet;
+    color: white;
+  }
   cursor: pointer;
   .container {
     padding: 56px 80px;
+    @media (max-width: 700px) {
+      padding: 40px;
+    }
     max-width: 600px;
+  }
+  &.open {
+    min-width: calc(100% - 160px);
+    @media (max-width: 700px) {
+      min-width: calc(100% - 80px);
+    }
   }
 }
 

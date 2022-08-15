@@ -22,17 +22,15 @@
 .left {
   text-align: left;
 }
-
 .vertical-text {
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
-
 .hidden {
   display: none;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -65,12 +63,12 @@ input[type="checkbox"] {
   background-repeat: no-repeat;
   filter: invert(1);
   position: relative;
-  background-image: url("/map2.png");
+  background-image: url('/map2.png');
 
   .point {
-    height: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
     filter: invert(1);
-    width: 40px;
     border-radius: 50%;
     color: white;
     position: absolute;

@@ -1,5 +1,4 @@
 import ImageSection from '../components/ImageSection/ImageSection';
-import LeftMenu from '../components/LeftMenu/LeftMenu';
 import Paragraph from '../components/Paragraph/Paragraph';
 import { SimpleLayout } from '../layouts/SimpleLayout/SimpleLayout';
 import { useState } from 'react';
@@ -9,6 +8,7 @@ import styles from './About/About.module.scss';
 const About = () => {
   const [section, setSection] = useState('present');
   const title = 'About';
+  console.log(sections);
   return (
     <>
       <SimpleLayout title={title} />
@@ -16,62 +16,78 @@ const About = () => {
       <ImageSection background='/20.jpeg' />
 
       <div className='flex'>
+        {sections.map((sec, index) => (
+          <div
+            key={index}
+            className={`${styles.section} ${sec.title}
+              ${section == sec.title ? styles.open : ''}`}
+            onClick={() => setSection(sec.title)}
+          >
+            <div className={styles.container}>
+              <h3>{sec.title}</h3>
+              <Paragraph size='large'>{sec.text}</Paragraph>
+              {sec.paragraphs.map((p, index) => (
+                <p key={index}>{p}</p>
+              ))}
+            </div>
+            <ImageSection background='/14.jpeg' />
+          </div>
+        ))}
+      </div>
+
+      <div className='flex'>
         <div
-          className={`bg-black ${styles.section} ${styles.history}`}
+          className={`bg-black ${styles.section} ${styles.history} ${
+            section == 'history' ? styles.open : ''
+          }`}
           onClick={() => setSection('history')}
-          style={{
-            minWidth: section == 'history' ? 'calc(100% - 160px)' : '80px',
-          }}
         >
           <div className={styles.container}>
             <h3
             // className={`${section !== 'history' && styles.vertical}`}
             >
-              {sections.history.title}
+              {sections[0].title}
             </h3>
-            <Paragraph size='large'>{sections.history.text}</Paragraph>
-            {sections.history.paragraphs.map((p, index) => (
+            <Paragraph size='large'>{sections[0].text}</Paragraph>
+            {sections[0].paragraphs.map((p, index) => (
               <p key={index}>{p}</p>
             ))}
           </div>
           <ImageSection background='/14.jpeg' />
         </div>
-
+        '
         <div
-          className={`${styles.section} ${styles.present}`}
+          className={`${styles.section} ${styles.present} ${
+            section == 'present' ? styles.open : ''
+          }`}
           onClick={() => setSection('present')}
-          style={{
-            minWidth: section == 'present' ? 'calc(100% - 160px)' : '80px',
-          }}
         >
           <div className={styles.container}>
             <h3
             // className={`${section !== 'present' && styles.vertical}`}
             // style={{ right: 104, color: 'black' }}
             >
-              {sections.present.title}
+              {sections[1].title}
             </h3>
-            <Paragraph size='large'>{sections.present.text}</Paragraph>
-            {sections.present.paragraphs.map((p, index) => (
+            <Paragraph size='large'>{sections[1].text}</Paragraph>
+            {sections[1].paragraphs.map((p, index) => (
               <p key={index}>{p}</p>
             ))}
           </div>
           <ImageSection background='/9.jpeg' />
         </div>
-
         <div
-          className={`bg-purple ${styles.section} ${styles.vision}`}
+          className={`bg-purple ${styles.section} ${styles.vision} ${
+            section == 'vision' ? styles.open : ''
+          }`}
           onClick={() => setSection('vision')}
-          style={{
-            minWidth: section == 'vision' ? 'calc(100% - 160px)' : '80px%',
-          }}
         >
           <div className={styles.container}>
             <h3
             // className={`${section !== 'vision' && styles.vertical}`}
             // style={{ right: 24 }}
             >
-              {sections.vision.title}
+              {sections[2].title}
             </h3>
             <h4>
               To see the exact date and all sorts of upcoming activities, check
