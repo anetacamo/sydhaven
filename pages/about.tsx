@@ -12,7 +12,6 @@ const About = () => {
   return (
     <>
       <SimpleLayout title={title} />
-
       <ImageSection background='/20.jpeg' />
 
       <div className='flex'>
@@ -35,7 +34,7 @@ const About = () => {
         ))}
       </div>
 
-      <div className='flex'>
+      {/* <div className='flex'>
         <div
           className={`bg-black ${styles.section} ${styles.history} ${
             section == 'history' ? styles.open : ''
@@ -55,7 +54,6 @@ const About = () => {
           </div>
           <ImageSection background='/14.jpeg' />
         </div>
-        '
         <div
           className={`${styles.section} ${styles.present} ${
             section == 'present' ? styles.open : ''
@@ -104,8 +102,7 @@ const About = () => {
             </p>
           </div>
           <ImageSection background='/9.jpeg' />
-        </div>
-      </div>
+        </div>  </div> */}
     </>
   );
 };
