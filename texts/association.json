@@ -3,12 +3,12 @@
     "subtitle": "subtitle",
     "title": "Association of South Harbour",
     "text": "Text about association, become a member, join our events, takeover instagram, send proposals, ask question, sign to newsletter",
-    "button": "",
+    "button": "s"
   },
   "member": {
     "subtitle": "Two types of memberships",
     "title": "become a member",
-    "text": "",
+    "text": "s",
     "memberships": [
       {
         "title": "first type of membership",
