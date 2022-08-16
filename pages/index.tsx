@@ -49,20 +49,8 @@ export default function Home({ posts }: HomeProps) {
         </h1>
       </ImageSection>
 
-      <section className='center'>
-        <h2>{sections.members.title}</h2>
-        <Paragraph>{sections.members.text}</Paragraph>
-        <br />
-        {/* <CategoryList posts={posts} /> */}
-        {/* <TagsList posts={posts} /> */}
-        <CardsList posts={posts} regular type='main' background='gray' main />
-        <Link href='/members'>
-          <button>{sections.members.button}</button>
-        </Link>
-      </section>
-
       <section
-        className='bg-black center'
+        className='bg-pink center'
         style={{
           backgroundImage: 'url(/bg6.png)',
           backgroundSize: '70%',
@@ -82,31 +70,18 @@ export default function Home({ posts }: HomeProps) {
         <a href='https://www.facebook.com/events/1379108515836403'>
           <button>{sections.next.button}</button>
         </a>
+      </section>
 
-        {/* <Paragraph>
-          To see more of upcoming activities, check the facebook site of
-          Sydhavnen
-        </Paragraph>
-        <a href="https://www.facebook.com/groups/154685458042586/events">
-          <button>more events</button>
-        </a> */}
-        {/* <StarsDivider /> */}
-        {/*<CardsList posts={posts} type="event" />*/}
-        {/* <div className="flex-center" style={{ alignItems: "unset" }}>
-          {posts.map((post, index) => (
-            <>
-              {post.frontmatter.type == "event" && (
-                <div key={index} className="card small bg-black border-purple">
-                  <h2>13.4.22</h2>
-                  <h4 style={{ marginTop: 0, marginBottom: -8 }}>
-                    {post.frontmatter.title}
-                  </h4>
-                  <h5>{post.frontmatter.address}</h5>
-                </div>
-              )}{" "}
-            </>
-          ))}
-        </div> */}
+      <section className='center'>
+        <h2>{sections.members.title}</h2>
+        <Paragraph>{sections.members.text}</Paragraph>
+        <br />
+        {/* <CategoryList posts={posts} /> */}
+        {/* <TagsList posts={posts} /> */}
+        <CardsList posts={posts} regular type='main' background='gray' main />
+        <Link href='/members'>
+          <button>{sections.members.button}</button>
+        </Link>
       </section>
 
       <section className='bg-pink'>
