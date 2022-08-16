@@ -2,8 +2,8 @@
 type: movement
 title: Ombold
 tags: [community, integration, sport]
-image: stars.png
+image: sneaker.png
 address: Jaegergaardsgade 152
-text: Each one teach one is a series of workshops by people of all sorts of skills. Hold in Frontloberne. Check website for the upcoming events.
+text: OMBOLD er et fodboldfællesskab for mennesker i udsatte positioner. Her er plads til alle uanset køn, alder og fodboldevner.
 link: http://ombold.dk/
 ---

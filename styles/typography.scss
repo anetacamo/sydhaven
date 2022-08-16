@@ -121,12 +121,14 @@ h1 {
   font-weight: 800;
   font-family: 'Brutalist', 'brutalismregular', sans-serif;
   font-family: 'violet_sansregular';
+  //font-family: 'brutalismregular';
   //  font-family: 'Violet Sans';
   // font-family: "Barriecito", cursive;
   // font-family: "Bungee Hairline", cursive;
   // font-family: "Bungee Shade", cursive;
   @media (max-width: 700px) {
     font-size: 2rem;
+    letter-spacing: 1px;
   }
 }
 
@@ -146,11 +148,12 @@ h1 {
 h2,
 .h2 {
   letter-spacing: 3px;
+  //font-family: 'brutalismregular';
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 400;
   @media (max-width: 700px) {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 }
 
@@ -161,12 +164,12 @@ h2,
 // }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2.4px;
   @media (max-width: 700px) {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -203,7 +206,6 @@ h6 {
 }
 
 a {
-  color: $pink;
   text-decoration: none;
   position: relative;
   font-weight: 300;

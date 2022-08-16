@@ -22,8 +22,8 @@ $gray: #f4f4f4;
 
 $menu-border-color: #fde2ff;
 
-$colors: "pink", "salmon", "yellow", "blue", "purple", "purplelight", "black",
-  "gray";
+$colors: 'pink', 'salmon', 'yellow', 'blue', 'purple', 'purplelight', 'black',
+  'gray';
 
 @each $color in $colors {
   .#{$color} {

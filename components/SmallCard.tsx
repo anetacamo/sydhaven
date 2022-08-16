@@ -17,20 +17,20 @@ export default function SmallCard({
   const { image, type, title, address, link, text, opening } = post;
   return (
     <div className={`card small bg-${background} border-${bordercolor}`}>
-      {/* <div style={{ padding: 8 }}>
+      <div style={{ padding: 8, paddingBottom: 0, marginBottom: -8 }}>
         <Image
           src={`/cards/${image}`}
-          alt="blue"
+          alt='blue'
           className={`half filter-yellow`}
           height={50}
           width={50}
-          objectFit="contain"
+          objectFit='contain'
         />
-      </div> */}
+      </div>
       <Link href={`/events/${slugify(title)}`}>
         <h4 style={{ marginBottom: '-8px', cursor: 'pointer' }}>{title}</h4>
       </Link>
-      <h5 className='bolded salmon'>{address}</h5>
+      <h5 className='bolded'>{address}</h5>
       {/* <h5 style={{ fontSize: 12 }}>{text}</h5> */}
       {/* {opening && (
         <h5>

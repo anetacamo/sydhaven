@@ -1,10 +1,11 @@
 ---
-type: culture house
+type: studio house
 main: true
 title: Frontloberne
 tags:
   [
     culture house,
+    studio house,
     venue,
     community,
     education,

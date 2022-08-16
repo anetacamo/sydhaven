@@ -61,10 +61,24 @@ export default function Home({ posts }: HomeProps) {
         </Link>
       </section>
 
-      <section className='bg-black center'>
+      <section
+        className='bg-black center'
+        style={{
+          backgroundImage: 'url(/bg6.png)',
+          backgroundSize: '70%',
+          backgroundPosition: 'center center',
+        }}
+      >
         <h3 className='purple'>{sections.next.subtitle}</h3>
         <h2 className={styles.largeTitle}>{sections.next.title}</h2>
         <h2>{sections.next.date}</h2>
+        <Paragraph>
+          Sydhavnens Festival er en bydelsfestival, hvor områdets aktører åbner
+          op for hele byen og for hinanden i fællesskab. Festivalen afholdes i
+          Sydhavnskvarteret. Startende fra Dokk1 ved Mindet, den nordlige del
+          ved Kulbroen, den sydlige del ved Slagteriet og helt ned ad
+          Sydhavnsgade til Soya Huset.
+        </Paragraph>
         <a href='https://www.facebook.com/events/1379108515836403'>
           <button>{sections.next.button}</button>
         </a>
@@ -99,7 +113,6 @@ export default function Home({ posts }: HomeProps) {
         <div style={{ maxWidth: 1200, margin: 'auto' }}>
           <h2>{sections.values.title}</h2>
           <Paragraph left>{sections.values.text}</Paragraph>
-          <p>see all the memmbers</p>
           <Link href='/members'>
             <button>{sections.values.button}</button>
           </Link>
@@ -116,13 +129,16 @@ export default function Home({ posts }: HomeProps) {
       </section>
 
       <section className='bg-pink'>
-        <div className='flex-center' style={{ maxWidth: 1400, margin: 'auto' }}>
-          <div style={{ textAlign: 'right', maxWidth: '50%' }}>
+        <div
+          className='flex-center'
+          style={{ maxWidth: 1400, margin: 'auto', flexWrap: 'wrap' }}
+        >
+          <div style={{ textAlign: 'right', maxWidth: '50%', minWidth: 300 }}>
             <h2>{sections.second.title}</h2>
             <p>{sections.second.text}</p>
             <StarsDivider />
           </div>
-          <div style={{ maxWidth: '50%' }}>
+          <div style={{ maxWidth: '50%', minWidth: 350 }}>
             <CardsList posts={posts} tag='community' />
           </div>
         </div>

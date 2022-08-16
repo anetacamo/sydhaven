@@ -2,8 +2,8 @@
 type: studio
 title: Wahlberg
 tags: [sport]
-image: stars.png
+image: ice.png
 address: Jens Juuls Vej 1
-text: Each one teach one is a series of workshops by people of all sorts of skills. Hold in Frontloberne. Check website for the upcoming events.
+text: At Wahlberg Motion Design we still design and manufacture all our products in Aarhus, Denmark.
 link: https://wahlberg.dk/
 ---

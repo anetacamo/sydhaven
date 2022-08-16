@@ -29,7 +29,7 @@ const About = () => {
                 <p key={index}>{p}</p>
               ))}
             </div>
-            <ImageSection background='/14.jpeg' />
+            {/* <ImageSection background='/14.jpeg' /> */}
           </div>
         ))}
       </div>
