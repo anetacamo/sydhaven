@@ -13,3 +13,24 @@
     text-decoration: underline;
   }
 }
+
+.largeMenu {
+  height: calc(100vh - 6rem);
+  width: calc(100vw - 3rem);
+  position: fixed;
+  z-index: 3;
+  padding: 1.5rem;
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 350ms ease-in;
+  opacity: 1;
+  a {
+    color: #e6a2ed;
+  }
+}
+
+.menuItem {
+  cursor: pointer;
+}

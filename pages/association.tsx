@@ -71,12 +71,16 @@ const Association = ({ posts }: AssociationProps) => {
           <button>{sections.member.button}</button>
           <div className='flex-center'>
             <Card
-              style={{ width: 640, height: 200, maxWidth: 640 }}
+              style={{ width: 640, height: 240, maxWidth: 640 }}
               background='yellow'
             >
-              <h3>{sections.member.instagram.title}</h3>
+              <h3 style={{ marginBottom: 0 }}>
+                {sections.member.instagram.title}
+              </h3>
               <Paragraph>{sections.member.instagram.text}</Paragraph>
-              <button>{sections.member.instagram.button}</button>
+              <button style={{ marginTop: 0 }}>
+                {sections.member.instagram.button}
+              </button>
             </Card>
           </div>
         </section>

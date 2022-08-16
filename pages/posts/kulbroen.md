@@ -9,6 +9,8 @@ link: https://www.visitaarhus.dk/aarhusregionen/planlaeg-din-tur/kulbroen-gdk109
 opening-hours: weekday 9-16
 text: Med Kulbroen aktiverer vi en del af Aarhus' industrielle kulturarv og skaber et nyt, internationalt vartegn for byen.
 opening: 9-17
+top: 34%
+left: 60%
 ---
 
 Kulbroen danner kulisserne for en upoleret bagside af byen. Det er et enestående og næsten gemt område, der rummer kreative og kulturelle miljøer, sociale væresteder, erhvervsliv, slagteri, krostue og ikke mindst en rig historie.
