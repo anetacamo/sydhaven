@@ -2,7 +2,7 @@
 type: shop
 title: Akustikken
 tags: [shop, music, creative business]
-image: stars.png
+image: music.png
 address: Jægergårdsgade 154B
 text: Leverandør af kvalitetsinstrumenter til nybegynder, øvede og professionelle siden 1982. Hos Akustikken finder du kvalitetsguitarer i alle prisklasser.
 link: https://www.facebook.com/events/frontl%C3%B8berne/each-one-teach-one-l%C3%A6r-at-lave-din-egen-podcast-nu/183389750604495/

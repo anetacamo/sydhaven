@@ -8,6 +8,8 @@ address: Jægergårdsgade 156S
 opening-hours: weekday 9-16
 text: Et socialt samlingspunkt og det sted, hvor du går hen for at finde den dims du liiige går og mangler.
 link: http://www.knudskiosk.dk/
+top: 25%
+left: 33%
 ---
 
 ​​KNUD´S KIOSK er en kiosk på den gammeldags facon.

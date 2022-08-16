@@ -2,7 +2,7 @@
 type: studio
 title: Tiny Office
 tags: [music, studio, woodwork, tinyhouses]
-image: bridge.png
+image: luggage.png
 address: Jægergårdsgade 158B,
 text: Et Tiny Office er et lille kontor på hjul. Men det kan også være meget andet og mere end det.
 website: https://tinyoffice.dk/da/om-os/kontakt/

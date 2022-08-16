@@ -2,7 +2,7 @@
 type: studio
 title: Made By Makers
 tags: [graphic studio]
-image: stars.png
+image: star.png
 address: Grumstolsvej 4F
 text: We are designers and collaborators, thinkers and makers. This is our Studio.
 link: https://madebymakers.com/

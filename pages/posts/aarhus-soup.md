@@ -3,7 +3,7 @@ title: Aarhus Soup
 type: community
 tags: [education, workshop, event makers, culture, funding]
 address: Jaegergaardsgade 152
-image: stars.png
+image: food.png
 text: Each one teach one is a series of small workshops organised by anybody who has anything to bring to the table.
 link: https://www.facebook.com/events/frontl%C3%B8berne/each-one-teach-one-l%C3%A6r-at-lave-din-egen-podcast-nu/183389750604495/
 ---

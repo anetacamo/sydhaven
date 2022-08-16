@@ -56,48 +56,8 @@ input[type='checkbox'] {
   background: purple;
 }
 
-.map-canvas {
-  height: calc(100vh - 220px);
-  width: 600px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: invert(1);
-  position: relative;
-  background-image: url('/map2.png');
-
-  .point {
-    height: 2.5rem;
-    width: 2.5rem;
-    filter: invert(1);
-    border-radius: 50%;
-    color: white;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    &:hover {
-      z-index: 3;
-      transition-duration: 150ms;
-    }
-    .icon {
-      filter: brightness(0) invert(1);
-      object-fit: contain;
-      width: 26px;
-      height: 26px;
-      padding: 8px;
-    }
-  }
-
-  .title {
-    width: 0;
-    opacity: 0;
-    &.opened {
-      transition-duration: 150ms;
-      padding: 3px 6px;
-      margin-left: 3px;
-      width: auto;
-      opacity: 1;
-      z-index: 3;
-    }
+.desktop {
+  @media (max-width: 700px) {
+    display: none;
   }
 }

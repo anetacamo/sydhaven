@@ -3,7 +3,7 @@ sydhaven: true
 type: event
 title: Sydhavnens Festival
 tags: [music, workshop]
-image: circle.png
+image: star.png
 text: Sydhavnens Festival er en bydelsfestival, hvor områdets aktører åbner op for hele byen og for hinanden i fællesskab.
 link: https://www.facebook.com/events/1379108515836403
 ---

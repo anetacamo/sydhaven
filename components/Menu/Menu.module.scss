@@ -7,3 +7,13 @@
     width: calc(100% - 3rem);
   }
 }
+
+.open {
+  min-height: calc(100vh - 4rem);
+  background-color: blueviolet;
+  padding: 2rem;
+  transition: 350ms ease-in;
+  display: block;
+  flex-direction: column;
+  z-index: 4;
+}

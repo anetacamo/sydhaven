@@ -2,7 +2,7 @@
 type: food makers
 title: KASA KASA
 tags: [food, creative business]
-image: coffee.png
+image: food.png
 address: Kalkværksvej 5G
 text: For andet år i træk åbner kasa kasa sommerbar ved Kulbroen på Sydhavnen.
 housed: kulbroen
