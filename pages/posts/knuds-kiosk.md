@@ -1,8 +1,9 @@
 ---
-type: creative collective
+type: studio house
 main: true
 title: KnudsKiosk
-tags: [bikes, repair, workshop, recycling, studio, community]
+tags:
+  [bikes, repair, workshop, recycling, studio, community, creative collective]
 image: bike.png
 address: Jægergårdsgade 156S
 opening-hours: weekday 9-16

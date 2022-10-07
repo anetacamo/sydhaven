@@ -1,5 +1,5 @@
 ---
-type: movement
+type: sport
 title: Skateducate
 tags: [community, integration, sport, feminism]
 image: sneaker.png

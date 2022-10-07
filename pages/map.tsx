@@ -6,10 +6,9 @@ import path from 'path';
 
 import { SimpleLayout } from '../layouts/SimpleLayout/SimpleLayout';
 import { categoryColors } from '../types/colors.type';
+import { camelize } from '../utils/camelize';
 
 import Post from '../types/card.type';
-import Card from '../components/Card';
-import ImageSection from '../components/ImageSection/ImageSection';
 import styles from './Map/Map.module.scss';
 
 export async function getStaticProps() {
@@ -53,9 +52,12 @@ const Map = ({ posts }: AllProps) => {
           {mapable.map((place, index) => (
             <div
               key={index}
-              className={`${styles.point} bg-purple`}
+              className={`${styles.point} bg-${
+                categoryColors[camelize(place.frontmatter.type)]
+              }`}
               onClick={() => setView(place.frontmatter.title)}
               onMouseEnter={() => setName(place.frontmatter.title)}
+              onMouseLeave={() => setName('')}
               style={{
                 top: place.frontmatter.top,
                 left: place.frontmatter.left,
@@ -67,9 +69,9 @@ const Map = ({ posts }: AllProps) => {
                 className={styles.icon}
               />
               <div
-                className={`${styles.title} bg-purple ${
-                  name === place.frontmatter.title ? styles.opened : ''
-                }`}
+                className={`${styles.title} bg-${
+                  categoryColors[camelize(place.frontmatter.type)]
+                } ${name === place.frontmatter.title ? styles.opened : ''}`}
                 // className={`title bg-${categoryColors[place.category]} ${
                 //   name === place.title ? "opened" : ""
                 // }`}

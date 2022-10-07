@@ -1,5 +1,5 @@
 ---
-type: food makers
+type: cafe
 title: KASA KASA
 tags: [food, creative business]
 image: food.png

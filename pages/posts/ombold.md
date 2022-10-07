@@ -1,5 +1,5 @@
 ---
-type: movement
+type: sport
 title: Ombold
 tags: [community, integration, sport]
 image: ball.png
