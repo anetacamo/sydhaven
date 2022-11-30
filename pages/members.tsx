@@ -1,23 +1,24 @@
-import { useEffect, useState } from 'react';
-import fs from 'fs';
-import matter from 'gray-matter';
-import path from 'path';
-import CategoryList from '../components/CategoryList';
-import ListDisplay from '../components/ListDisplay/ListDisplay';
-import { SinglePageLayout } from '../layouts/SinglePageLayout/SinglePageLayout';
-import styles from './All/All.module.scss';
-import Post from '../types/card.type';
+import { useEffect, useState } from "react";
+import fs from "fs";
+import matter from "gray-matter";
+import path from "path";
+import CategoryList from "../components/CategoryList";
+import ListDisplay from "../components/ListDisplay/ListDisplay";
+import { SinglePageLayout } from "../layouts/SinglePageLayout/SinglePageLayout";
+import styles from "./All/All.module.scss";
+import Post from "../types/card.type";
+import Link from "next/link";
 
 export async function getStaticProps() {
   // get files from the directory
-  const files = fs.readdirSync(path.join('pages/posts'));
+  const files = fs.readdirSync(path.join("pages/posts"));
   const posts = files.map((filename) => {
     // get slug
-    const slug = filename.replace('.md', '');
+    const slug = filename.replace(".md", "");
     // get all frontmatter here:
     const markdownWithMeta = fs.readFileSync(
-      path.join('pages/posts', filename),
-      'utf-8'
+      path.join("pages/posts", filename),
+      "utf-8"
     );
     const { data: frontmatter } = matter(markdownWithMeta);
     return { slug, frontmatter };
@@ -36,7 +37,7 @@ interface AllProps {
 
 const All = ({ posts }: AllProps) => {
   const [category, setCategory] = useState<string | string[]>([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [blogs, setBlogs] = useState<Post[]>([]);
 
   useEffect(() => {
@@ -44,7 +45,9 @@ const All = ({ posts }: AllProps) => {
       category === [] ? true : post.frontmatter.type.includes(category)
     );
     const results = postsToRender.filter((post) =>
-      searchQuery === '' ? true : post.frontmatter.title.includes(searchQuery)
+      searchQuery === ""
+        ? true
+        : post.frontmatter.title.toLowerCase().includes(searchQuery)
     );
     setBlogs(results);
   }, [searchQuery, category]);
@@ -59,40 +62,47 @@ const All = ({ posts }: AllProps) => {
       <div className={`flex ${styles.absolute}`}>
         <input
           className={styles.search}
-          placeholder='search'
-          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="search"
+          onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
+          value={searchQuery}
         />
-
-        {/* <div>
+        <div>
           <h5 style={{ marginBottom: 12 }}>Also part of Sydhaven?</h5>
-          <button className={styles.button}>+ Add yourself</button>
-        </div> */}
+          <Link href={"/newMember"}>
+            <button className={styles.button}>+ join the list</button>
+          </Link>
+        </div>
       </div>
-      <h1 style={{ marginTop: 40 }}>Sydhaven Members</h1>
-      {/*<TagsList posts={posts} />*/}
+      <h1 style={{ marginTop: 40 }}>Sydhavnen Members</h1>
       <CategoryList
         posts={posts}
         onTagClick={onCategorySet}
         category={category}
       />
 
-      <div></div>
       <div className={styles.listContainer}>
         <h4>
-          showing all{' '}
+          showing all{" "}
           {category.length === 0 || (
-            <span
-              className='purplelight'
-              style={{ textDecoration: 'underline', cursor: 'pointer' }}
-              onClick={() => setCategory([])}
-            >
-              {category} x
-            </span>
+            <>
+              <span
+                className={`${styles.searchQuery} purplelight`}
+                onClick={() => setCategory([])}
+              >
+                {category}
+              </span>{" "}
+            </>
           )}
           {searchQuery && (
             <>
-              {' '}
-              including <span className='purplelight'>{searchQuery}</span>
+              {" "}
+              including{" "}
+              <span
+                className={`${styles.searchQuery} purplelight`}
+                onClick={() => setSearchQuery("")}
+              >
+                {searchQuery}
+              </span>
             </>
           )}
         </h4>

@@ -2,7 +2,7 @@
 type: cafe
 main: true
 title: Kulbroen
-tags: [music, food, community, cafe]
+tags: [music, food, cafe]
 image: bridge.png
 address: Kalkværksvej 5G
 link: https://www.visitaarhus.dk/aarhusregionen/planlaeg-din-tur/kulbroen-gdk1094183

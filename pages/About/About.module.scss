@@ -58,23 +58,3 @@
     }
   }
 }
-
-.vertical {
-  position: fixed;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  height: 100vh;
-  font-size: 24px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-  top: 0;
-  left: 24px;
-  margin: 0;
-}
-
-.vision.vertical {
-  right: 24px;
-}

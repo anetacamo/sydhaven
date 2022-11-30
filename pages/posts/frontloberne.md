@@ -7,7 +7,6 @@ tags:
     culture house,
     studio house,
     venue,
-    community,
     education,
     workshop,
     event makers,

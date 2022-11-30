@@ -32,6 +32,11 @@
   @media (max-width: 700px) {
     font-size: 1.5rem;
   }
+  &:hover {
+    color: lightpink;
+    transition-duration: 350ms;
+    cursor: pointer;
+  }
 }
 .text {
   margin-top: 8px;
