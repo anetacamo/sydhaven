@@ -1,5 +1,5 @@
 ---
-type: movement
+type: sport
 title: Siamo Street
 tags: [community, integration, sport]
 image: sneaker.png

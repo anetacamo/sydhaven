@@ -1,5 +1,5 @@
 ---
-type: movement
+type: sport
 title: Permasport
 tags: [community, integration, sport]
 image: sneaker.png

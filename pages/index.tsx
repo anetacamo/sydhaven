@@ -42,8 +42,33 @@ export default function Home({ posts }: HomeProps) {
         <h1 className={styles.mainTitle}>{sections.intro.text}</h1>
       </ImageSection>
 
+      {/* <section className='bg-purple grid'>
+        <img
+          src='/cards/food.png'
+          style={{ maxHeight: 120, maxWidth: 120 }}
+          className='filter-yellow'
+        />
+        <img
+          src='/cards/diamond.png'
+          style={{
+            maxHeight: 120,
+            maxWidth: 120,
+          }}
+          className='filter-yellow'
+        />
+        <img
+          src='/cards/house4.png'
+          style={{ maxHeight: 120, maxWidth: 120 }}
+          className='filter-yellow'
+        />
+        <img
+          src='/cards/mermaid.png'
+          style={{ maxHeight: 120, maxWidth: 120 }}
+          className='filter-yellow'
+        />
+      </section> */}
+
       <section className="center">
-        <Subtitle subtitle={sections.members.subtitle} />
         <h2>{sections.members.title}</h2>
         <Paragraph>{sections.members.text}</Paragraph>
         <br />
@@ -66,7 +91,13 @@ export default function Home({ posts }: HomeProps) {
         <Subtitle subtitle={sections.next.subtitle} />
         <h2 className={styles.largeTitle}>{sections.next.title}</h2>
         <h2>{sections.next.date}</h2>
-        <Paragraph>{sections.next.text}</Paragraph>
+        <Paragraph>
+          Sydhavnens Festival er en bydelsfestival, hvor områdets aktører åbner
+          op for hele byen og for hinanden i fællesskab. Festivalen afholdes i
+          Sydhavnskvarteret. Startende fra Dokk1 ved Mindet, den nordlige del
+          ved Kulbroen, daen sydlige del ved Slagteriet og helt ned ad
+          Sydhavnsgade til Soya Huset.
+        </Paragraph>
         <a href="https://www.facebook.com/events/1379108515836403">
           <button>{sections.next.button}</button>
         </a>
