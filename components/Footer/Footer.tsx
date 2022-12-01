@@ -7,7 +7,7 @@ import styles from "./Footer.module.scss";
 export default function Footer() {
   const [open, setOpen] = useState(false);
   return (
-    <footer className={`${open && styles.open} ${styles.footer} `}>
+    <footer className={`${open && styles.open} ${styles.footer} menu`}>
       <h2>H</h2>
 
       {!open && (

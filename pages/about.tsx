@@ -1,32 +1,36 @@
-import ImageSection from '../components/ImageSection/ImageSection';
-import Paragraph from '../components/Paragraph/Paragraph';
-import { SimpleLayout } from '../layouts/SimpleLayout/SimpleLayout';
-import { useState } from 'react';
-import sections from '../texts/about.json';
-import styles from './About/About.module.scss';
+import ImageSection from "../components/ImageSection/ImageSection";
+import Paragraph from "../components/Paragraph/Paragraph";
+import { SimpleLayout } from "../layouts/SimpleLayout/SimpleLayout";
+import { useState } from "react";
+import sections from "../texts/about.json";
+import styles from "./About/About.module.scss";
 
 const About = () => {
-  const [section, setSection] = useState('present');
-  const title = 'About';
+  const [section, setSection] = useState("present");
+  const title = "About";
   console.log(sections);
   return (
     <>
       <SimpleLayout title={title} />
-      <ImageSection background='/20.jpeg' />
+      <ImageSection background="/20.jpeg" />
 
-      <div className='flex'>
+      <div className="flex">
         {sections.map((sec, index) => (
           <div
             key={index}
             className={`${styles.section} ${sec.title}
-              ${section == sec.title ? styles.open : ''}`}
+              ${section == sec.title ? styles.open : ""}`}
             onClick={() => setSection(sec.title)}
           >
             <div className={styles.container}>
-              <h3>{sec.title}</h3>
-              <Paragraph size='large'>{sec.text}</Paragraph>
+              <h3 className={`purple ${section !== sec.title && "vertical"}`}>
+                {sec.title}
+              </h3>
+              <Paragraph size="large">{sec.text}</Paragraph>
+              <br />
+              <br />
               {sec.paragraphs.map((p, index) => (
-                <p key={index}>{p}</p>
+                <Paragraph key={index}>{p}</Paragraph>
               ))}
             </div>
             {/* <ImageSection background='/14.jpeg' /> */}

@@ -51,8 +51,14 @@ interface AllProps extends CategoryType {
 }
 
 const Map = ({ posts, categoryColors }: AllProps) => {
+  const isBrowser = () => typeof window !== 'undefined';
+
   const [name, setName] = useState('');
   const [view, setView] = useState('');
+
+  const [coords, setCoords] = useState({ x: 0, y: 0 });
+
+  const { height, width } = useWindowSize();
   const clicked = posts.filter((place) => place.frontmatter.title === view);
   const mapable = posts.filter((post) => post.frontmatter.top);
   console.log(mapable);
@@ -61,7 +67,13 @@ const Map = ({ posts, categoryColors }: AllProps) => {
     <SimpleLayout>
       <div className={`flex ${styles.container}`}>
         <div className={styles.mapCanvas}>
-          <img src='/map4.jpeg' className={styles.map} />
+          <img
+            src='/map4.jpeg'
+            className={styles.map}
+            onClick={(e) => {
+              setCoords({ x: e.clientX, y: e.clientY });
+            }}
+          />
           {mapable.map((place, index) => (
             <div
               key={index}
@@ -101,6 +113,12 @@ const Map = ({ posts, categoryColors }: AllProps) => {
               </div>
             </div>
           ))}
+
+          <p style={{ position: 'absolute', top: 30, left: 30 }}>
+            <b className='purple'>left</b>{' '}
+            {Math.round((coords.x / width) * 100)} <b className='purple'>top</b>{' '}
+            {Math.round((coords.y / height) * 100)}
+          </p>
         </div>
         {/* <div style={{ width: '100%' }}>
           <div style={{ padding: 24 }}>

@@ -1,6 +1,5 @@
 import Card from "../Card";
 import SmallCard from "../SmallCard";
-import styles from "./CardsList.module.scss";
 
 interface CardsListProps {
   tag?: string;

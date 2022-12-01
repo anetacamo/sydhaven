@@ -21,29 +21,25 @@ export default function CategoryList({
         filter by:
       </h6> */}
       <div className="tags">
-        {tagsonce.map(
-          (tag, index) => {
-            return (
-              //<Link href={`/tag/${slugify(tag)}`} key={index}>
-              <div
-                key={index}
-                className={`type bg-purplelight ${
-                  category == tag && "bg-chosen"
-                }`}
-                aria-label={`${tag} - ${category == tag ? "checked" : ""}`}
-                style={{ transitionDuration: "350ms" }}
-                onClick={() => onTagClick(tag)}
-                role="button"
-                tabIndex={0}
-                onKeyPress={() => onTagClick(tag)}
-              >
-                {tag}
-                {category == tag && <span style={{ paddingLeft: 8 }}> x</span>}
-              </div>
-            );
-          }
-          //</Link>
-        )}
+        {tagsonce.map((tag, index) => {
+          return (
+            <div
+              key={index}
+              className={`type bg-purplelight ${
+                category == tag && "bg-chosen"
+              }`}
+              aria-label={`${tag} - ${category == tag ? "checked" : ""}`}
+              style={{ transitionDuration: "350ms" }}
+              onClick={() => onTagClick(tag)}
+              role="button"
+              tabIndex={0}
+              onKeyPress={() => onTagClick(tag)}
+            >
+              {tag}
+              {category == tag && <span style={{ paddingLeft: 8 }}> x</span>}
+            </div>
+          );
+        })}
       </div>
     </>
   );
