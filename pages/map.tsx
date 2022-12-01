@@ -11,6 +11,18 @@ import { camelize } from '../utils/camelize';
 import Post from '../types/card.type';
 import styles from './Map/Map.module.scss';
 
+type CategoryType = {
+  community: string;
+  shop: string;
+  cafe: string;
+  education: string;
+  studioHouse: string;
+  studio: string;
+  gallery: string;
+  socialMovement: string;
+  sport: string;
+};
+
 export async function getStaticProps() {
   // get files from the directory
   const files = fs.readdirSync(path.join('pages/posts'));
@@ -32,12 +44,13 @@ export async function getStaticProps() {
   };
 }
 
-interface AllProps {
+interface AllProps extends CategoryType {
   posts: Post[];
   category?: string;
+  categoryColors: CategoryType;
 }
 
-const Map = ({ posts }: AllProps) => {
+const Map = ({ posts, categoryColors }: AllProps) => {
   const [name, setName] = useState('');
   const [view, setView] = useState('');
   const clicked = posts.filter((place) => place.frontmatter.title === view);
@@ -53,7 +66,9 @@ const Map = ({ posts }: AllProps) => {
             <div
               key={index}
               className={`${styles.point} bg-${
-                categoryColors[camelize(place.frontmatter.type)]
+                categoryColors[
+                  camelize(place.frontmatter.type as keyof CategoryType)
+                ]
               }`}
               onClick={() => setView(place.frontmatter.title)}
               onMouseEnter={() => setName(place.frontmatter.title)}
