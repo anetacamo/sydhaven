@@ -7,16 +7,17 @@ import path from 'path';
 import { SimpleLayout } from '../layouts/SimpleLayout/SimpleLayout';
 import { categoryColors } from '../types/colors.type';
 import { camelize } from '../utils/camelize';
+import useWindowSize from '../utils/useWindowSize';
 
 import Post from '../types/card.type';
 import styles from './Map/Map.module.scss';
 
 type CategoryType = {
-  community: string;
-  shop: string;
+  community?: string;
+  shop?: string;
   cafe: string;
   education: string;
-  studioHouse: string;
+  studioHouse?: string;
   studio: string;
   gallery: string;
   socialMovement: string;
@@ -47,10 +48,9 @@ export async function getStaticProps() {
 interface AllProps extends CategoryType {
   posts: Post[];
   category?: string;
-  categoryColors: CategoryType;
 }
 
-const Map = ({ posts, categoryColors }: AllProps) => {
+const Map = ({ posts }: AllProps) => {
   const isBrowser = () => typeof window !== 'undefined';
 
   const [name, setName] = useState('');
@@ -79,7 +79,7 @@ const Map = ({ posts, categoryColors }: AllProps) => {
               key={index}
               className={`${styles.point} bg-${
                 categoryColors[
-                  camelize(place.frontmatter.type as keyof CategoryType)
+                  camelize(place?.frontmatter.type as keyof CategoryType)
                 ]
               }`}
               onClick={() => setView(place.frontmatter.title)}
@@ -120,16 +120,6 @@ const Map = ({ posts, categoryColors }: AllProps) => {
             {Math.round((coords.y / height) * 100)}
           </p>
         </div>
-        {/* <div style={{ width: '100%' }}>
-          <div style={{ padding: 24 }}>
-            <p className='type bg-purple' style={{ marginTop: 32 }}>
-              {clicked[0]?.frontmatter.type}
-            </p>
-            <h2>{clicked[0]?.frontmatter.title}</h2>
-            <p style={{ marginTop: -24 }}>{clicked[0]?.frontmatter.address}</p>
-            <p style={{ maxWidth: 600 }}>{clicked[0]?.frontmatter.text}</p>
-          </div>
-        </div> */}
       </div>
     </SimpleLayout>
   );
