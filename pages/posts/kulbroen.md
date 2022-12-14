@@ -5,12 +5,12 @@ title: Kulbroen
 tags: [music, food, cafe]
 image: bridge.png
 address: Kalkværksvej 5G
-link: https://www.visitaarhus.dk/aarhusregionen/planlaeg-din-tur/kulbroen-gdk1094183
+facebook: kulbroen
 opening-hours: weekday 9-16
 text: Med Kulbroen aktiverer vi en del af Aarhus' industrielle kulturarv og skaber et nyt, internationalt vartegn for byen.
 opening: 9-17
-top: 34%
-left: 60%
+latitude: 56.14908937295068
+longitude: 10.210655227516376
 ---
 
 Kulbroen danner kulisserne for en upoleret bagside af byen. Det er et enestående og næsten gemt område, der rummer kreative og kulturelle miljøer, sociale væresteder, erhvervsliv, slagteri, krostue og ikke mindst en rig historie.

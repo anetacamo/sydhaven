@@ -6,6 +6,7 @@ interface ImageSectionProps {
   children?: ReactNode;
   overlay?: boolean;
   full?: boolean;
+  invert?: boolean;
 }
 
 export default function ImageSection({
@@ -13,10 +14,13 @@ export default function ImageSection({
   children,
   overlay,
   full,
+  invert,
 }: ImageSectionProps) {
   return (
     <section
-      className={`${styles.image} ${full && styles.full}`}
+      className={`${styles.image} ${full && styles.full} ${
+        invert && styles.invert
+      }`}
       style={{
         backgroundImage: `url(${background})`,
       }}

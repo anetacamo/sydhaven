@@ -17,14 +17,7 @@ export const SinglePageLayout = ({ children, title }: LayoutProps) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Menu />
-      <section
-        className='bg-black center'
-        id='content'
-        style={{ minHeight: '50vh', position: 'relative' }}
-      >
-        <h1>{title}</h1>
-        {children}
-      </section>
+      {children}
       {/* <Footer /> */}
     </>
   );

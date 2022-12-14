@@ -6,7 +6,7 @@ image: coffee.png
 address: Filmbyen 2
 text: USE is a strategic digital design agency working with strong partners
 housed: frontloberne
-link: https://www.usestudio.dk/
-top: 43%
-left: 80%
+link: www.usestudio.dk
+latitude: 56.151781178585075
+longitude: 10.21340578333979
 ---

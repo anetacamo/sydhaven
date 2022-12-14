@@ -39,53 +39,45 @@ const Association = ({ posts }: AssociationProps) => {
   const title = 'Association of South Harbour';
   return (
     <DefaultLayout title={title}>
-      <div className='center bg-black' style={{ paddingBottom: 48 }}>
-        <section>
-          <StarsDivider />
-          {sections.intro.subtitle !== '' && (
-            <h3 className='purple-bg'>{sections.intro.subtitle}</h3>
-          )}
+      <div className='center bg-black'>
+        <section style={{ paddingBottom: 120, paddingTop: 120 }}>
+          {sections.intro.subtitle !== '' && <h3 className='purple-bg'></h3>}
 
           <h1 style={{ maxWidth: 600, margin: 'auto' }}>
             {sections.intro.title}
           </h1>
           <Paragraph>{sections.intro.text}</Paragraph>
-          <StarsDivider />
         </section>
 
         <ImageSection background='/14.jpeg' />
 
-        <section className='bg-purple'>
-          <h3 className='pink'>{sections.member.subtitle}</h3>
+        <section className='bg-black'>
           <h2>{sections.member.title}</h2>
-          <div className='flex-center'>
+          <Paragraph>{sections.intro.text}</Paragraph>
+          <div className='flex-center' style={{ marginTop: 24 }}>
             {sections.member.memberships.map((mem, index) => (
-              <Card background={index === 2 ? 'pink' : 'black'} key={index}>
+              <Card background={'purple'} key={index}>
                 <h3>{mem.title}</h3>
-                <Paragraph>{mem.text}</Paragraph>
+                <p>{mem.text}</p>
                 <button>{mem.button}</button>
               </Card>
             ))}
           </div>
-          <Paragraph>{sections.member.text2}</Paragraph>
-          <button>{sections.member.button}</button>
+
           <div className='flex-center'>
-            <Card
-              style={{ width: 640, height: 240, maxWidth: 640 }}
-              background='yellow'
-            >
-              <h3 style={{ marginBottom: 0 }}>
+            <Card style={{ width: 640, height: 240, maxWidth: 640 }}>
+              <h3 style={{ marginBottom: 12 }}>
                 {sections.member.instagram.title}
               </h3>
-              <Paragraph>{sections.member.instagram.text}</Paragraph>
-              <button style={{ marginTop: 0 }}>
+              <p>{sections.member.instagram.text}</p>
+              <button style={{ marginTop: 12 }}>
                 {sections.member.instagram.button}
               </button>
             </Card>
           </div>
         </section>
 
-        {/* <section className='bg-black'>
+        <section className='bg-purple'>
           <h2>Sydhavens Documents</h2>
           <Paragraph>
             Text about assosiation, two types of membership, what does it do,
@@ -112,7 +104,7 @@ const Association = ({ posts }: AssociationProps) => {
               </a>
             </li>
           </ul>
-        </section> */}
+        </section>
         {/* <section className='bg-pink'>
           <h3 className='purple'>open events</h3>
           <h2>Get to know South Harbour live</h2>
@@ -132,7 +124,7 @@ const Association = ({ posts }: AssociationProps) => {
             </div>
           </button>
         </section> */}
-        {/* <section className="bg-gray" style={{ color: "black" }}>
+        <section className='bg-gray' style={{ color: 'black' }}>
           <h2>Newsletter</h2>
           <Paragraph>
             South Harbour is main organiser of South Harbour festival that
@@ -141,16 +133,22 @@ const Association = ({ posts }: AssociationProps) => {
             Newsletter
           </Paragraph>
           <input
-            style={{ borderTopRightRadius: 0, borderBottomRightRadius: 0 }}
-            placeholder="your email"
+            style={{
+              borderTopRightRadius: 0,
+              borderBottomRightRadius: 0,
+              paddingTop: 12,
+              fontSize: 12,
+              paddingBottom: 10,
+            }}
+            placeholder='your email'
           />
           <button style={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}>
-            <div className="flex-center">
+            <div className='flex-center'>
               <span style={{ paddingRight: 8 }}>signup</span>
               <FaArrowRight />
             </div>
           </button>
-        </section> */}
+        </section>
       </div>
     </DefaultLayout>
   );

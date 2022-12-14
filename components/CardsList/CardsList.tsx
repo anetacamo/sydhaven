@@ -1,5 +1,5 @@
-import Card from "../Card";
-import SmallCard from "../SmallCard";
+import Card from '../Card';
+import SmallCard from '../SmallCard';
 
 interface CardsListProps {
   tag?: string;
@@ -24,22 +24,23 @@ export default function CardsList({
   main,
   all,
 }: CardsListProps) {
+  console.log(posts);
   return (
-    <div className="flex-center" style={{ alignItems: "unset" }}>
+    <div className='flex-center' style={{ alignItems: 'unset' }}>
       {tag &&
         posts.map(
           (post, index) =>
             post.frontmatter.tags?.includes(tag) &&
             (regular ? (
               <Card
-                background={background || "black"}
+                background={background || 'black'}
                 key={index}
                 post={post.frontmatter}
-                bordercolor="salmon"
+                bordercolor='salmon'
               />
             ) : (
               <SmallCard
-                background={background || "black"}
+                background={background || 'black'}
                 key={index}
                 post={post.frontmatter}
               />
@@ -52,14 +53,14 @@ export default function CardsList({
             post.frontmatter.type === type &&
             (regular ? (
               <Card
-                background={background || "black"}
+                background={background || 'black'}
                 key={index}
                 post={post.frontmatter}
-                bordercolor="salmon"
+                bordercolor='salmon'
               />
             ) : (
               <SmallCard
-                background={background || "black"}
+                background={background || 'black'}
                 key={index}
                 post={post.frontmatter}
               />
@@ -72,14 +73,14 @@ export default function CardsList({
             post.frontmatter.opening &&
             (regular ? (
               <Card
-                background={background || "black"}
+                background={background || 'black'}
                 key={index}
                 post={post.frontmatter}
-                bordercolor="salmon"
+                bordercolor='salmon'
               />
             ) : (
               <SmallCard
-                background={background || "black"}
+                background={background || 'black'}
                 key={index}
                 post={post.frontmatter}
               />
@@ -92,14 +93,14 @@ export default function CardsList({
             post.frontmatter.sydhaven &&
             (regular ? (
               <Card
-                background={background || "black"}
+                background={background || 'black'}
                 key={index}
                 post={post.frontmatter}
-                bordercolor="salmon"
+                bordercolor='salmon'
               />
             ) : (
               <SmallCard
-                background={background || "black"}
+                background={background || 'black'}
                 key={index}
                 post={post.frontmatter}
               />
@@ -112,14 +113,14 @@ export default function CardsList({
             post.frontmatter.main &&
             (regular ? (
               <Card
-                background={background || "black"}
+                background={background || 'black'}
                 key={index}
                 post={post.frontmatter}
-                bordercolor="salmon"
+                bordercolor='salmon'
               />
             ) : (
               <SmallCard
-                background={background || "black"}
+                background={background || 'black'}
                 key={index}
                 post={post.frontmatter}
               />
@@ -129,14 +130,14 @@ export default function CardsList({
         posts.map((post, index) =>
           regular ? (
             <Card
-              background={background || "black"}
+              background={background || 'black'}
               key={index}
               post={post.frontmatter}
-              bordercolor="salmon"
+              bordercolor='salmon'
             />
           ) : (
             <SmallCard
-              background={background || "black"}
+              background={background || 'black'}
               key={index}
               post={post.frontmatter}
             />

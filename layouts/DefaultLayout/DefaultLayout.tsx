@@ -19,7 +19,6 @@ export const DefaultLayout = ({ children, title }: LayoutProps) => {
 
       <Menu />
       <div id='content'>{children}</div>
-      {/* <Footer /> */}
     </>
   );
 };

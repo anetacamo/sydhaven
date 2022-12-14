@@ -6,7 +6,9 @@ image: diamond.png
 address: Jaegergaardsgade 152
 text: Vi er klubben for kultur, kreativitet og nysgerrighed 🌠 Gennem events skaber vi oplevelseslommer fyldt med nye og gode venner, glimmer og magi 🍍⛲🌈🌜🎉
 opening: every second wednesday
-website: https://www.facebook.com/clubcurious/
+facebook: clubcurious
 top: 34%
 left: 46%
+latitude: 56.14788383454515
+longitude: 10.210058485187
 ---

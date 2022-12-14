@@ -1,0 +1,23 @@
+.absolute {
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  top: 12px;
+  width: calc(100% - 80px);
+}
+.search {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: white;
+  border-radius: 0;
+  padding: 0;
+  font-size: 14px;
+  align-items: center;
+  border-bottom: 1px solid white;
+
+  &:hover {
+    background-color: transparent;
+    color: white;
+  }
+}

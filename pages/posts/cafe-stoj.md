@@ -6,9 +6,11 @@ image: coffee.png
 address: Jaegergaardsgade 146
 text: På Cafe Støj kan du nyde din morgenmad, hygge med formiddagskaffen, spise frokost med dig selv eller dine venner og forretningsforbindelser.
 opening: 8-16
-link: https://cafestoj.dk/
+link: cafestoj.dk
 top: 21%
 left: 55.25%
+latitude: 56.148379844724836
+longitude: 10.208544500528363
 ---
 
 På Cafe Støj kan du nyde din morgenmad, hygge med formiddagskaffen, spise frokost med dig selv eller dine venner og forretningsforbindelser. Til aften har vi lækre tapas og Ugens Varme Støj Ret, som er et solidt hjemmelavet måltid.

@@ -1,24 +1,27 @@
-import { useEffect, useState } from "react";
-import fs from "fs";
-import matter from "gray-matter";
-import path from "path";
-import CategoryList from "../components/CategoryList";
-import ListDisplay from "../components/ListDisplay/ListDisplay";
-import { SinglePageLayout } from "../layouts/SinglePageLayout/SinglePageLayout";
-import styles from "./All/All.module.scss";
-import Post from "../types/card.type";
-import Link from "next/link";
+import { useEffect, useState } from 'react';
+import fs from 'fs';
+import matter from 'gray-matter';
+import path from 'path';
+import CategoryList from '../components/CategoryList';
+import ListDisplay from '../components/ListDisplay/ListDisplay';
+import { SinglePageLayout } from '../layouts/SinglePageLayout/SinglePageLayout';
+import styles from './All/All.module.scss';
+import Post from '../types/card.type';
+import Link from 'next/link';
+import MapGl from '../components/MapGl/MapGl';
+import Cards from '../components/Cards/Cards';
+import SearchField from '../components/SearchField/SearchField';
 
 export async function getStaticProps() {
   // get files from the directory
-  const files = fs.readdirSync(path.join("pages/posts"));
+  const files = fs.readdirSync(path.join('pages/posts'));
   const posts = files.map((filename) => {
     // get slug
-    const slug = filename.replace(".md", "");
+    const slug = filename.replace('.md', '');
     // get all frontmatter here:
     const markdownWithMeta = fs.readFileSync(
-      path.join("pages/posts", filename),
-      "utf-8"
+      path.join('pages/posts', filename),
+      'utf-8'
     );
     const { data: frontmatter } = matter(markdownWithMeta);
     return { slug, frontmatter };
@@ -37,7 +40,7 @@ interface AllProps {
 
 const All = ({ posts }: AllProps) => {
   const [category, setCategory] = useState<string | string[]>([]);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
   const [blogs, setBlogs] = useState<Post[]>([]);
 
   useEffect(() => {
@@ -45,7 +48,7 @@ const All = ({ posts }: AllProps) => {
       category === [] ? true : post.frontmatter.type.includes(category)
     );
     const results = postsToRender.filter((post) =>
-      searchQuery === ""
+      searchQuery === ''
         ? true
         : post.frontmatter.title.toLowerCase().includes(searchQuery)
     );
@@ -59,7 +62,77 @@ const All = ({ posts }: AllProps) => {
 
   return (
     <SinglePageLayout>
-      <div className={`flex ${styles.absolute}`}>
+      <section
+        className='bg-black'
+        style={{
+          paddingTop: 0,
+          paddingBottom: 0,
+          position: 'fixed',
+          marginTop: -27,
+        }}
+      >
+        <div
+          className='flex black-bg'
+          style={{
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: 'calc(100vw - 64px)',
+          }}
+        >
+          <CategoryList
+            posts={posts}
+            onTagClick={onCategorySet}
+            category={category}
+          />
+          <SearchField
+            searchQuery={searchQuery}
+            onSearchQueryChange={setSearchQuery}
+          />
+        </div>
+      </section>
+      <section className='bg-black' style={{ paddingTop: 86 }}>
+        <div className='bg-black flex'>
+          <div style={{ position: 'fixed' }}>
+            <MapGl posts={blogs} />
+          </div>
+          <div style={{ paddingLeft: 376 }}>
+            <Cards posts={blogs} />
+          </div>
+        </div>
+      </section>
+      <section style={{ marginTop: -80 }} className='bg-black'>
+        <div className={styles.listContainer}>
+          <div className='flex' style={{ justifyContent: 'space-between' }}>
+            <h4>
+              showing all{' '}
+              {category.length === 0 || (
+                <>
+                  <span
+                    className={`${styles.searchQuery} purplelight`}
+                    onClick={() => setCategory([])}
+                  >
+                    {category}
+                  </span>{' '}
+                </>
+              )}
+              {searchQuery && (
+                <>
+                  {' '}
+                  including{' '}
+                  <span
+                    className={`${styles.searchQuery} purplelight`}
+                    onClick={() => setSearchQuery('')}
+                  >
+                    {searchQuery}
+                  </span>
+                </>
+              )}
+              <span className='gray'> {blogs.length} results</span>
+            </h4>
+          </div>
+        </div>
+      </section>
+      {/* <div className={`flex ${styles.absolute}`}>
         <input
           className={styles.search}
           placeholder="search"
@@ -109,7 +182,7 @@ const All = ({ posts }: AllProps) => {
         {blogs.map((post, index) => (
           <ListDisplay key={index} post={post} />
         ))}
-      </div>
+      </div> */}
     </SinglePageLayout>
   );
 };

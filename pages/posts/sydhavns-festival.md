@@ -5,7 +5,6 @@ title: Sydhavnens Festival
 tags: [music, workshop]
 image: star.png
 text: Sydhavnens Festival er en bydelsfestival, hvor områdets aktører åbner op for hele byen og for hinanden i fællesskab.
-link: https://www.facebook.com/events/1379108515836403
 ---
 
 PR ㋛ GRAM 2022
