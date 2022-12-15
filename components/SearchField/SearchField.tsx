@@ -5,7 +5,7 @@ interface SearchFieldProps {
   onSearchQueryChange?: any;
 }
 
-export default function ({
+export default function SearchField({
   searchQuery,
   onSearchQueryChange,
 }: SearchFieldProps) {
