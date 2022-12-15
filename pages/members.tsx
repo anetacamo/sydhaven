@@ -104,7 +104,11 @@ const All = ({ posts }: AllProps) => {
             <MapGl posts={blogs} onMarkerClick={setBlog} />
           </div>
           <div style={{ padding: 16, maxWidth: 600 }}>
-            <h1>{blog?.title}</h1>
+            <h1>
+              {blog?.title
+                ? blog?.title
+                : 'click on the markers on the map to display info here. Or scroll down the page and browse the cards'}
+            </h1>
 
             {blog?.address && (
               <div className='flex' style={{ alignItems: 'center' }}>

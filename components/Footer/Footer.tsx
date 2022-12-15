@@ -97,6 +97,23 @@ export default function Footer() {
           </p>
           <p style={{ margin: 0 }}>Sarah Jarsbrø</p>
           <p style={{ margin: 0 }}>Sarahjarsbro@gmail.com</p>
+
+          <h3>Partners</h3>
+          <li>
+            <Link href='https://www.sydhavnenskvarteret.dk'>
+              Sydhavens Kvarteret
+            </Link>
+          </li>
+          <li>
+            <Link href='https://www.sydhavnensfestival.dk'>
+              Sydhavens Festival
+            </Link>
+          </li>
+          <li>
+            <Link href='https://www.sammenomsydhavnen.dk'>
+              Sammen om sydhavnen
+            </Link>
+          </li>
         </div>
         <div style={{ paddingRight: 120 }}>
           <h3>Engage</h3>

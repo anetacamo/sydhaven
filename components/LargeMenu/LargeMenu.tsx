@@ -23,9 +23,6 @@ export default function Footer() {
             To see the exact date and all sorts of upcoming activities, check
             the facebook site of Sydhaven. or click any of the following links
           </p> */}
-          <Link href='/'>F</Link>
-          <Link href='/'>LI</Link>
-          <Link href='/'>Ig</Link>
         </div>
         {/* <div className={styles.column}>
           <h3>Engage</h3>
@@ -56,7 +53,7 @@ export default function Footer() {
           <h3>Members</h3>
           <h3>Categories</h3>
         </div> */}
-        <div className={styles.column}>
+        {/* <div className={styles.column}>
           <h3>Partners</h3>
           <li className={styles.li}>
             <Link href='https://www.sydhavnenskvarteret.dk'>
@@ -69,11 +66,11 @@ export default function Footer() {
             </Link>
           </li>
           <li className={styles.li}>
-            <Link href='https://www.sammenomsydhaven.dk'>
-              Sydhavens Festival
+            <Link href='https://www.sammenomsydhavnen.dk'>
+              Sammen om sydhavnen
             </Link>
           </li>
-        </div>
+        </div> */}
       </div>
       <p className='right'>
         copyright Sydhaven 2022 | code & design by{' '}

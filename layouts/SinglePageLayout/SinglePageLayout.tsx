@@ -18,7 +18,7 @@ export const SinglePageLayout = ({ children, title }: LayoutProps) => {
       </Head>
       <Menu />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
