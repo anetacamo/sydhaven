@@ -109,7 +109,7 @@ export default function Home({ posts }: HomeProps) {
           <MapGl posts={blogs} />
           <div className='right'>
             <h1 style={{ maxWidth: 600, fontFamily: 'brutalismregular' }}>
-              Sydhavnen
+              Sydhavnen område
             </h1>
             <h4 style={{ maxWidth: 600 }}>
               {sections.intro.text}
