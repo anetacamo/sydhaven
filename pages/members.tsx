@@ -74,7 +74,7 @@ const All = ({ posts }: AllProps) => {
           paddingTop: 0,
           paddingBottom: 0,
           position: 'fixed',
-          marginTop: -27,
+          marginTop: -20,
           zIndex: 4,
         }}
       >
