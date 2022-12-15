@@ -12,12 +12,18 @@ interface CardProps extends CardType {
   post?: CardType;
   children?: ReactNode;
   categoryColors?: any | CategoryColorsType;
+  onCardClick?: any;
 }
 
-export default function CardRegular({ post, children }: CardProps) {
+export default function CardRegular({
+  post,
+  children,
+  onCardClick,
+}: CardProps) {
   return (
     //@ts-expect-error
     <div
+      onClick={() => onCardClick(post)}
       className={`${styles.card} bg-${
         categoryColors[camelize(post?.type as keyof CategoryColorsType)]
       }`}

@@ -68,28 +68,35 @@ export default function Home({ posts }: HomeProps) {
   return (
     <DefaultLayout title={title}>
       <section
+        className='bg-black full flex'
         style={{
-          backgroundImage: `url('map4.jpeg')`,
-          filter: 'invert(1)',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-          backgroundColor: 'white',
-          height: 400,
+          paddingTop: 120,
+          paddingBottom: 120,
+          justifyContent: 'space-between',
         }}
-      ></section>
-      <section
-        className='bg-black full'
-        style={{ paddingTop: 120, paddingBottom: 120 }}
       >
-        <h1 style={{ maxWidth: 600, fontFamily: 'brutalismregular' }}>
-          Sydhavnen
-        </h1>
-        <h4 style={{ maxWidth: 600 }}>
-          {sections.intro.text}
-          {sections.intro.text}
-        </h4>
-        {/* <button>read more</button> */}
+        <div>
+          <h1 style={{ maxWidth: 600, fontFamily: 'brutalismregular' }}>
+            Wellcome to Aarhus Sydhavnen
+          </h1>
+          <h4 style={{ maxWidth: 600 }}>
+            {sections.intro.text}
+            {sections.intro.text}
+          </h4>
+          {/* <button>read more</button> */}
+        </div>
+        <div
+          style={{
+            backgroundImage: `url('map4.jpeg')`,
+            filter: 'invert(1)',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+            backgroundColor: 'white',
+            height: 400,
+            width: 600,
+          }}
+        ></div>
       </section>
 
       <ImageSection background='/14.jpeg' />
@@ -187,7 +194,7 @@ export default function Home({ posts }: HomeProps) {
         />
       </section> */}
 
-      <section className='center'>
+      {/* <section className='center'>
         <h2>{sections.members.title}</h2>
         <Paragraph>{sections.members.text}</Paragraph>
         <br />
@@ -240,7 +247,7 @@ export default function Home({ posts }: HomeProps) {
         <Link href='/members'>
           <button>{sections.members.button}</button>
         </Link>
-      </section>
+      </section> */}
     </DefaultLayout>
   );
 }

@@ -1,4 +1,4 @@
-@import url("https://api.fontshare.com/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap");
+@import url('https://api.fontshare.com/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap');
 
 .menu {
   display: flex;
@@ -35,9 +35,4 @@
 footer {
   background-color: black;
   color: white;
-  position: fixed;
-  bottom: 0;
-  width: calc(100% - 4rem);
-  min-height: 30px;
-  transition: 350ms ease-in;
 }

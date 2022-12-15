@@ -12,6 +12,11 @@ import MapGl from '../components/MapGl/MapGl';
 import Cards from '../components/Cards/Cards';
 import SearchField from '../components/SearchField/SearchField';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocation, faLink } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { FaInstagram } from 'react-icons/fa';
+
 export async function getStaticProps() {
   // get files from the directory
   const files = fs.readdirSync(path.join('pages/posts'));
@@ -42,6 +47,7 @@ const All = ({ posts }: AllProps) => {
   const [category, setCategory] = useState<string | string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [blogs, setBlogs] = useState<Post[]>([]);
+  const [blog, setBlog] = useState<Post>();
 
   useEffect(() => {
     const postsToRender = posts.filter((post) =>
@@ -69,6 +75,7 @@ const All = ({ posts }: AllProps) => {
           paddingBottom: 0,
           position: 'fixed',
           marginTop: -27,
+          zIndex: 4,
         }}
       >
         <div
@@ -90,18 +97,61 @@ const All = ({ posts }: AllProps) => {
           />
         </div>
       </section>
+
       <section className='bg-black' style={{ paddingTop: 86 }}>
         <div className='bg-black flex'>
-          <div style={{ position: 'fixed' }}>
-            <MapGl posts={blogs} />
+          <div>
+            <MapGl posts={blogs} onMarkerClick={setBlog} />
           </div>
-          <div style={{ paddingLeft: 376 }}>
-            <Cards posts={blogs} />
+          <div style={{ padding: 16, maxWidth: 600 }}>
+            <h1>{blog?.title}</h1>
+
+            {blog?.address && (
+              <div className='flex' style={{ alignItems: 'center' }}>
+                <FontAwesomeIcon
+                  icon={faLocation}
+                  style={{ fontSize: 20, color: 'purple', paddingRight: 16 }}
+                />
+                <p style={{ margin: '4px 0' }}>{blog?.address}</p>
+              </div>
+            )}
+
+            {blog?.link && (
+              <div className='flex' style={{ alignItems: 'center' }}>
+                <FontAwesomeIcon
+                  icon={faLink}
+                  style={{ fontSize: 20, color: 'purple', paddingRight: 16 }}
+                />
+                <p style={{ margin: '4px 0' }}>{blog?.link}</p>
+              </div>
+            )}
+
+            {blog?.facebook && (
+              <div className='flex' style={{ alignItems: 'center' }}>
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  style={{ fontSize: 20, color: 'purple', paddingRight: 16 }}
+                />
+                <p style={{ margin: '4px 0' }}>{blog?.facebook}</p>
+              </div>
+            )}
+
+            {blog?.instagram && (
+              <div className='flex' style={{ alignItems: 'center' }}>
+                <FontAwesomeIcon
+                  icon={FaInstagram}
+                  style={{ fontSize: 20, color: 'purple', paddingRight: 16 }}
+                />
+                <p style={{ margin: '4px 0' }}>{blog?.instagram}</p>
+              </div>
+            )}
+
+            <p>{blog?.text}</p>
           </div>
         </div>
       </section>
       <section style={{ marginTop: -80 }} className='bg-black'>
-        <div className={styles.listContainer}>
+        <div>
           <div className='flex' style={{ justifyContent: 'space-between' }}>
             <h4>
               showing all{' '}
@@ -131,6 +181,7 @@ const All = ({ posts }: AllProps) => {
             </h4>
           </div>
         </div>
+        <Cards posts={blogs} onCardClick={setBlog} />
       </section>
       {/* <div className={`flex ${styles.absolute}`}>
         <input

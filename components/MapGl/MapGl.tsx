@@ -9,9 +9,10 @@ import CategoryColorsType from '../../types/categoryColors.type';
 
 interface MapGiProps {
   posts?: any;
+  onMarkerClick?: any;
 }
 
-export default function MapGl({ posts }: MapGiProps) {
+export default function MapGl({ posts, onMarkerClick }: MapGiProps) {
   const [name, setName] = useState('');
   const [viewState, setViewState] = useState({
     latitude: 56.14788383454515,
@@ -24,7 +25,7 @@ export default function MapGl({ posts }: MapGiProps) {
       <Map
         style={{
           width: '360px',
-          height: '80vh',
+          height: 'calc(100vh - 200px)',
           minWidth: '360px',
           borderRight: '16px solid black',
         }}
@@ -46,6 +47,7 @@ export default function MapGl({ posts }: MapGiProps) {
                 longitude={post.frontmatter.longitude}
               >
                 <div
+                  onClick={() => onMarkerClick(post.frontmatter)}
                   className={`${styles.point} bg-${
                     categoryColors[
                       camelize(

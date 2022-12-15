@@ -6,7 +6,7 @@ image: music.png
 address: Jægergårdsgade 154B
 text: Leverandør af kvalitetsinstrumenter til nybegynder, øvede og professionelle siden 1982. Hos Akustikken finder du kvalitetsguitarer i alle prisklasser.
 opening: 10-17.30
-website: https://akustikken.dk/
+website: akustikken.dk/
 top: 30%
 left: 50%
 latitude: 56.14795666997674

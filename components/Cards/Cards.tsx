@@ -10,13 +10,18 @@ interface CardsProps {
   sydhaven?: boolean;
   main?: boolean;
   all?: boolean;
+  onCardClick?: any;
 }
 
-export default function Cards({ posts, background }: CardsProps) {
+export default function Cards({ posts, background, onCardClick }: CardsProps) {
   return (
     <div className='flex-center' style={{ alignItems: 'unset', margin: -8 }}>
       {posts.map((post, index) => (
-        <CardRegular key={index} post={post.frontmatter} />
+        <CardRegular
+          key={index}
+          post={post.frontmatter}
+          onCardClick={onCardClick}
+        />
       ))}
     </div>
   );
