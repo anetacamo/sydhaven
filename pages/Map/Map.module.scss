@@ -34,6 +34,7 @@
 .title {
   width: 0;
   opacity: 0;
+  z-index: 2;
   &.opened {
     font-size: 0.9rem;
     transition-duration: 150ms;
@@ -41,7 +42,7 @@
     margin-left: 3px;
     width: auto;
     opacity: 1;
-    z-index: 3;
+    z-index: 4;
     line-height: 1;
     span {
       opacity: 0.6;

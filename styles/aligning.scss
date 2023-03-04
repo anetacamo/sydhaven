@@ -65,40 +65,94 @@ input[type='checkbox'] {
   }
 }
 
-.vertical {
-  position: fixed;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  height: 100vh;
-  font-size: 24px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  text-align: right;
-  padding: 2rem 0;
-  color: white;
-  bottom: 0;
-  margin: 0;
-}
+//about
 
-.vision .vertical {
-  right: 1.5rem;
-  @media (max-width: 700px) {
-    right: 0.5rem;
+// .vertical {
+//   -ms-writing-mode: tb-rl;
+//   writing-mode: vertical-rl;
+//   text-orientation: mixed;
+//   letter-spacing: 8px;
+//   height: 100vh;
+// }
+
+// .vision.vertical {
+//   right: 1.5rem;
+//   @media (max-width: 700px) {
+//     right: 0.5rem;
+//   }
+// }
+
+// .present.vertical {
+//   color: black;
+//   margin-left: -3.75rem;
+//   @media (max-width: 700px) {
+//     margin-left: -2.375rem;
+//   }
+// }
+
+// .history.vertical h3 {
+//   left: 1.5rem;
+//   @media (max-width: 700px) {
+//     left: 0.5rem;
+//   }
+// }
+.about {
+  .history {
+    background-color: black;
+    color: white;
   }
-}
-
-.present .vertical {
-  color: black;
-  margin-left: -3.75rem;
-  @media (max-width: 700px) {
-    margin-left: -2.375rem;
+  .present {
+    text-align: center;
+    .content {
+      margin: auto;
+    }
   }
-}
+  .vision {
+    text-align: right;
+    background-color: blueviolet;
+    color: white;
+    &.side {
+      right: 0;
+    }
+    .content {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
 
-.history .vertical {
-  left: 1.5rem;
-  @media (max-width: 700px) {
-    left: 0.5rem;
+  .container {
+    transition: 350ms ease-in-out;
+    height: 100vh;
+    padding: 0 4px;
+    width: 100%;
+    &.open .vertical {
+      display: none;
+    }
+    &.side {
+      height: 100vh;
+      width: 30px;
+      // position: fixed;
+
+      top: 0;
+      z-index: 2;
+      text-align: center;
+      cursor: pointer;
+      .content {
+        display: none;
+      }
+      .vertical {
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        letter-spacing: 8px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+      }
+    }
+    .content {
+      padding: 4rem 2rem;
+      max-width: 600px;
+    }
   }
 }

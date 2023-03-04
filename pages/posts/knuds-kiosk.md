@@ -1,5 +1,5 @@
 ---
-type: house
+type: studio house
 main: true
 title: KnudsKiosk
 tags:

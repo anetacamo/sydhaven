@@ -1,0 +1,7 @@
+.searchQuery {
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    color: salmon;
+  }
+}

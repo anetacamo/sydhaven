@@ -11,6 +11,7 @@ import Link from 'next/link';
 import MapGl from '../components/MapGl/MapGl';
 import Cards from '../components/Cards/Cards';
 import SearchField from '../components/SearchField/SearchField';
+import ResultsInfo from '../components/ResultsInfo/ResultsInfo';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation, faLink } from '@fortawesome/free-solid-svg-icons';
@@ -91,24 +92,33 @@ const All = ({ posts }: AllProps) => {
             onTagClick={onCategorySet}
             category={category}
           />
-          <SearchField
-            searchQuery={searchQuery}
-            onSearchQueryChange={setSearchQuery}
-          />
+          <div style={{ textAlign: 'right' }}>
+            <SearchField
+              searchQuery={searchQuery}
+              onSearchQueryChange={setSearchQuery}
+            />
+            <ResultsInfo
+              category={category}
+              onCategorySet={setCategory}
+              onSearchQuerySet={setSearchQuery}
+              searchQuery={searchQuery}
+              blogsLength={blogs.length}
+            />
+          </div>
         </div>
       </section>
 
       <section className='bg-black' style={{ paddingTop: 86 }}>
         <div className='bg-black flex'>
-          <div>
+          <div style={{ width: '50%' }}>
             <MapGl posts={blogs} onMarkerClick={setBlog} />
           </div>
-          <div style={{ padding: 16, maxWidth: 600 }}>
-            <h1>
+          <div style={{ width: '50%', maxWidth: 500, paddingLeft: 32 }}>
+            <h2>
               {blog?.title
                 ? blog?.title
                 : 'click on the markers on the map to display info here. Or scroll down the page and browse the cards'}
-            </h1>
+            </h2>
 
             {blog?.address && (
               <div className='flex' style={{ alignItems: 'center' }}>

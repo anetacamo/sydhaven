@@ -18,7 +18,6 @@ type CategoryType = {
   cafe: string;
   education: string;
   studioHouse?: string;
-  studio: string;
   gallery: string;
   socialMovement: string;
   sport: string;
@@ -61,8 +60,6 @@ const Map = ({ posts }: AllProps) => {
   const { height, width } = useWindowSize();
   const clicked = posts.filter((place) => place.frontmatter.title === view);
   const mapable = posts.filter((post) => post.frontmatter.top);
-  console.log(mapable);
-
   return (
     <SimpleLayout>
       <div className={`flex ${styles.container}`}>

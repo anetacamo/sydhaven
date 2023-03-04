@@ -24,7 +24,6 @@ export default function CardsList({
   main,
   all,
 }: CardsListProps) {
-  console.log(posts);
   return (
     <div className='flex-center' style={{ alignItems: 'unset' }}>
       {tag &&

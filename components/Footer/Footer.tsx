@@ -1,8 +1,12 @@
 import Link from 'next/link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight, faMailForward } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedinIn,
+} from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
   return (
@@ -75,16 +79,34 @@ export default function Footer() {
         <div>
           <h3>contact</h3>
           <div className='flex' style={{ paddingBottom: 24 }}>
-            <FontAwesomeIcon
-              icon={faFacebook}
-              style={{ fontSize: 20, paddingRight: 8 }}
-              className='purplelight'
-            />
-            <FontAwesomeIcon
-              icon={faInstagram}
-              style={{ fontSize: 20 }}
-              className='purplelight'
-            />
+            <a href='https://www.facebook.com/groups/1692517437636792'>
+              <FontAwesomeIcon
+                icon={faFacebook}
+                style={{ fontSize: 20, paddingRight: 8 }}
+                className='purplelight'
+              />
+            </a>
+            <a href='https://www.instagram.com/sydhavnenaarhus'>
+              <FontAwesomeIcon
+                icon={faInstagram}
+                style={{ fontSize: 20, paddingRight: 8 }}
+                className='purplelight'
+              />
+            </a>
+            <a href='https://www.linkedin.com/company/foreningen-sydhavnen/?originalSubdomain=dk'>
+              <FontAwesomeIcon
+                icon={faLinkedinIn}
+                style={{ fontSize: 20 }}
+                className='purplelight'
+              />
+            </a>
+            <a href='mailto:sydhavneanaarhus@gmail.com'>
+              <FontAwesomeIcon
+                icon={faMailForward}
+                style={{ fontSize: 20 }}
+                className='purplelight'
+              />
+            </a>
           </div>
           <p className='purplelight' style={{ margin: 0 }}>
             Kulbroen
@@ -125,7 +147,7 @@ export default function Footer() {
           <p className='purplelight' style={{ marginBottom: 0 }}>
             Also a member?
           </p>
-          <p style={{ margin: 0 }}>Fill this form</p>
+          <p style={{ margin: 0 }}>Fill this form to join the map</p>
 
           <p style={{ marginBottom: 0, fontSize: 13 }}>
             © Sydhavnen association 2023

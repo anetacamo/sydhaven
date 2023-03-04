@@ -21,14 +21,8 @@ export default function MapGl({ posts, onMarkerClick }: MapGiProps) {
   });
 
   return (
-    <>
+    <div className={styles.map}>
       <Map
-        style={{
-          width: '360px',
-          height: 'calc(100vh - 200px)',
-          minWidth: '360px',
-          borderRight: '16px solid black',
-        }}
         {...viewState}
         onMove={(evt) => setViewState(evt.viewState)}
         maxZoom={17}
@@ -70,7 +64,7 @@ export default function MapGl({ posts, onMarkerClick }: MapGiProps) {
                     } ${name === post.frontmatter.title ? styles.opened : ''}`}
                   >
                     {name === post.frontmatter.title ? name : ''}
-                    <span className='gray'>
+                    <span>
                       {' '}
                       {name === post.frontmatter.title
                         ? post.frontmatter.address
@@ -82,6 +76,6 @@ export default function MapGl({ posts, onMarkerClick }: MapGiProps) {
             )
         )}
       </Map>
-    </>
+    </div>
   );
 }

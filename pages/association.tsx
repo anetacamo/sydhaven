@@ -4,7 +4,6 @@ import path from 'path';
 import Card from '../components/Card';
 import Paragraph from '../components/Paragraph/Paragraph';
 import { FaArrowDown, FaArrowRight } from 'react-icons/fa';
-import StarsDivider from '../components/StarsDivider';
 import { DefaultLayout } from '../layouts/DefaultLayout/DefaultLayout';
 import sections from '../texts/association.json';
 import ImageSection from '../components/ImageSection/ImageSection';
@@ -47,13 +46,37 @@ const Association = ({ posts }: AssociationProps) => {
             {sections.intro.title}
           </h1>
           <Paragraph>{sections.intro.text}</Paragraph>
+          <button>mail us</button>
         </section>
 
-        <ImageSection background='/14.jpeg' />
+        <section className='bg-red'>
+          <h3>
+            are you also located in sydhaven?
+            <span
+              className='blue'
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <FaArrowRight style={{ paddingRight: 8 }} /> Join the map
+            </span>
+          </h3>
+        </section>
+
+        <ImageSection background='/14.jpeg'>
+          <h3>
+            are you also located in sydhaven?
+            <br /> <FaArrowRight /> Join the map{' '}
+          </h3>
+        </ImageSection>
 
         <section className='bg-black'>
           <h2>{sections.member.title}</h2>
-          <Paragraph>{sections.intro.text}</Paragraph>
+          <Paragraph>
+            {sections.intro.text}. Statutes, the board and registration.
+          </Paragraph>
           <div className='flex-center' style={{ marginTop: 24 }}>
             {sections.member.memberships.map((mem, index) => (
               <Card background={'purple'} key={index}>
@@ -75,6 +98,18 @@ const Association = ({ posts }: AssociationProps) => {
               </button>
             </Card>
           </div>
+        </section>
+
+        <section className='bg-red'>
+          <h2>Engage</h2>
+          <Paragraph>
+            2 annual events from the association - Tours: info and booking of
+            various in the neighbourhood - Tours: info and booking of various in
+            the neighbourhood - Articles: about Sydhavnen and from the
+            neighbourhood. Articles: about Sydhavnen and from the neighbourhood
+            - Photo: - from Sydhavnen - possibly from Kasper Vindeløv (local
+            photographer) -
+          </Paragraph>
         </section>
 
         <section className='bg-purple'>
