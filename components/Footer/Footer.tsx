@@ -96,7 +96,7 @@ export default function Footer() {
             <a href='https://www.linkedin.com/company/foreningen-sydhavnen/?originalSubdomain=dk'>
               <FontAwesomeIcon
                 icon={faLinkedinIn}
-                style={{ fontSize: 20 }}
+                style={{ fontSize: 20, paddingRight: 8 }}
                 className='purplelight'
               />
             </a>

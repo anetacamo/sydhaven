@@ -49,7 +49,7 @@ const Association = ({ posts }: AssociationProps) => {
           <button>mail us</button>
         </section>
 
-        <section className='bg-red'>
+        {/* <section className='bg-red'>
           <h3>
             are you also located in sydhaven?
             <span
@@ -63,13 +63,25 @@ const Association = ({ posts }: AssociationProps) => {
               <FaArrowRight style={{ paddingRight: 8 }} /> Join the map
             </span>
           </h3>
-        </section>
+        </section> */}
 
-        <ImageSection background='/14.jpeg'>
-          <h3>
-            are you also located in sydhaven?
-            <br /> <FaArrowRight /> Join the map{' '}
-          </h3>
+        <ImageSection background='/14.jpeg' overlay>
+          <section
+            style={{
+              paddingBottom: 120,
+              paddingTop: 120,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
+          >
+            {sections.intro.subtitle !== '' && <h3 className='purple-bg'></h3>}
+
+            <h1 style={{ maxWidth: 600, margin: 'auto' }}>
+              {sections.intro.title}
+            </h1>
+            <Paragraph>{sections.intro.text}</Paragraph>
+            <button>mail us</button>
+          </section>
         </ImageSection>
 
         <section className='bg-black'>

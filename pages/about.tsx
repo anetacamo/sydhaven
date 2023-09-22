@@ -45,11 +45,12 @@ const About = () => {
         >
           <h3 className='vertical'>History</h3>
           <div className='content'>
+            <h3>about the sydhaven</h3>
+            <h1>history</h1>
             <h4>
               To see the exact date and all sorts of upcoming activities, check
               the facebook site of or click an
             </h4>
-
             <p>
               To see the exact date and all sorts of upcoming activities, check
               the facebook site of or click any of the place links. To see the
@@ -58,6 +59,40 @@ const About = () => {
               date and all sorts of upcoming activities, check the facebook site
               of or click any of the place links.
             </p>
+            <img
+              src='14.jpeg'
+              style={{
+                height: 260,
+                //  border: '4px solid black',
+                marginTop: 24,
+                boxShadow: '12px 12px 0px purple',
+                minWidth: 240,
+                maxWidth: 400,
+                objectFit: 'cover',
+              }}
+            ></img>
+            <p
+              style={{
+                marginTop: 48,
+                borderLeft: '12px solid purple',
+                paddingLeft: 12,
+              }}
+            >
+              <i style={{ color: '#fecdfe' }}>
+                To see the exact date and all sorts of upcoming activities,
+                check the facebook site of or click any of the place links. To
+                see the exact date and all sorts of upcoming activities, check
+                the facebook site of or click any of the place links. To see the
+                exact date and all sorts of upcoming activities, check the
+                facebook site of or click any of the place links.
+              </i>
+            </p>
+            <br /> <br />
+            <h3>about the sydhaven</h3>
+            <h4>
+              To see the exact date and all sorts of upcoming activities, check
+              the facebook site of or click an
+            </h4>
           </div>
         </div>
 
@@ -69,6 +104,7 @@ const About = () => {
         >
           <h3 className='vertical'>present</h3>
           <div className='content'>
+            <h2>present</h2>
             <h4>
               To see the exact date and all sorts of upcoming activities, check
               the facebook site of or click an
@@ -82,6 +118,18 @@ const About = () => {
               date and all sorts of upcoming activities, check the facebook site
               of or click any of the place links.
             </p>
+            <img
+              src='14.jpeg'
+              style={{
+                height: 260,
+                //  border: '4px solid black',
+                marginTop: 24,
+                boxShadow: '12px 12px 0px purple',
+                minWidth: 240,
+                maxWidth: 400,
+                objectFit: 'cover',
+              }}
+            ></img>
           </div>
         </div>
 
@@ -93,6 +141,7 @@ const About = () => {
         >
           <h3 className='vertical'>vision</h3>
           <div className='content'>
+            <h1>vision</h1>
             <h4>
               To see the exact date and all sorts of upcoming activities, check
               the facebook site of or click an
@@ -106,6 +155,18 @@ const About = () => {
               date and all sorts of upcoming activities, check the facebook site
               of or click any of the place links.
             </p>
+            <img
+              src='14.jpeg'
+              style={{
+                height: 260,
+                //  border: '4px solid black',
+                marginTop: 12,
+
+                minWidth: 240,
+                maxWidth: 400,
+                objectFit: 'cover',
+              }}
+            ></img>
           </div>
         </div>
       </div>

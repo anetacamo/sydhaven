@@ -5,15 +5,10 @@ import path from 'path';
 import { useEffect, useState } from 'react';
 
 import Cards from '../components/Cards/Cards';
-import CardsList from '../components/CardsList/CardsList';
-import Paragraph from '../components/Paragraph/Paragraph';
-import StarsDivider from '../components/StarsDivider';
 import { DefaultLayout } from '../layouts/DefaultLayout/DefaultLayout';
 import ImageSection from '../components/ImageSection/ImageSection';
-import Link from 'next/link';
 import sections from '../texts/home.json';
 import styles from './Home/Home.module.scss';
-import Subtitle from '../components/Subtitle/Subtitle';
 import MapGl from '../components/MapGl/MapGl';
 import CategoryList from '../components/CategoryList';
 import TagsList from '../components/TagsList';
@@ -47,6 +42,34 @@ export default function Home({ posts }: HomeProps) {
   const [category, setCategory] = useState<string | string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [blogs, setBlogs] = useState<Post[]>([]);
+  const [slide, setSlide] = useState(0);
+
+  const slides = [
+    {
+      background: 'black',
+      text: 'Welcome to Aarhus Sydhavnen',
+      image: '20',
+      overlay: 'clouds',
+    },
+    {
+      background: 'blue',
+      text: 'education',
+      image: '14',
+      overlay: 'clouds',
+    },
+    {
+      background: 'purple',
+      text: 'fæleskab',
+      image: '9',
+      overlay: 'clouds',
+    },
+    {
+      background: 'yellow',
+      text: 'culture',
+      image: '20',
+      overlay: 'clouds',
+    },
+  ];
 
   useEffect(() => {
     const postsToRender = posts.filter((post) =>
@@ -65,42 +88,209 @@ export default function Home({ posts }: HomeProps) {
     previousCategory === cat ? setCategory([]) : setCategory(cat);
   };
 
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setSlide((prevSlide) => (prevSlide + 1) % 4); // Modulus 4 to loop back to 0 after reaching 3
+  //   }, 2000); // Change slide every 2 seconds (2000 milliseconds)
+
+  //   return () => {
+  //     clearInterval(intervalId); // Clear the interval when the component unmounts
+  //   };
+  // }, []);
   return (
     <DefaultLayout title={title}>
-      <section
+      {/* <section
         className='bg-black full flex'
         style={{
-          paddingTop: 120,
-          paddingBottom: 120,
           justifyContent: 'space-between',
         }}
       >
         <div>
-          <h1 style={{ maxWidth: 600, fontFamily: 'brutalismregular' }}>
-            Wellcome to Aarhus Sydhavnen
-          </h1>
+          <h3>optional small text</h3>
+          <h1 style={{ maxWidth: 600 }}>Wellcome to Aarhus Sydhavnen</h1>
           <h4 style={{ maxWidth: 600 }}>
             {sections.intro.text}
             {sections.intro.text}
           </h4>
-          {/* <button>read more</button> */}
         </div>
         <div
           style={{
-            backgroundImage: `url('map4.jpeg')`,
-            filter: 'invert(1)',
+            backgroundImage: `url('birds.png')`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'contain',
+            filter: 'invert(1)',
             backgroundPosition: 'center',
             backgroundColor: 'white',
-            height: 400,
-            width: 600,
+            height: '300px',
+            width: '300px',
           }}
         ></div>
+      </section> */}
+
+      <div
+        className={`flex bg-${slides[slide].background}`}
+        style={{
+          position: 'relative',
+
+          //  transitionDuration: '350ms',
+          boxSizing: 'border-box',
+          height: '100vh',
+          marginTop: -75,
+          //  alignContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <div
+          style={{
+            width: '50%',
+            padding: '4rem 2rem',
+            boxSizing: 'border-box',
+          }}
+        >
+          <h3>optional small text</h3>
+          <h1 style={{ maxWidth: 600, transitionDuration: '350ms' }}>
+            {slides[slide].text}
+          </h1>
+          <h4 style={{ maxWidth: 600, transitionDuration: '350ms' }}>
+            {sections.intro.text}
+            {sections.intro.text}
+          </h4>
+        </div>
+        <p
+          style={{
+            position: 'absolute',
+            bottom: 18,
+            left: '2rem',
+            cursor: 'pointer',
+          }}
+        >
+          <span onClick={() => setSlide(0)} onMouseEnter={() => setSlide(0)}>
+            one
+          </span>{' '}
+          <span onClick={() => setSlide(1)} onMouseEnter={() => setSlide(1)}>
+            education
+          </span>{' '}
+          <span onClick={() => setSlide(2)} onMouseEnter={() => setSlide(2)}>
+            fælleskab
+          </span>{' '}
+          <span onClick={() => setSlide(3)} onMouseEnter={() => setSlide(3)}>
+            culture
+          </span>
+        </p>
+        <div
+          style={{
+            backgroundImage: `url('${slides[slide].image}.jpeg')`,
+            backgroundRepeat: 'no-repeat',
+            filter: 'none',
+            transitionDuration: '350ms',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            boxSizing: 'border-box',
+            width: '50%',
+            height: '100vh',
+          }}
+        ></div>
+        <div
+          className={`filter-${slides[slide].background}`}
+          style={{
+            backgroundImage: `url('${slides[slide].overlay}.png')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            width: '50%',
+            position: 'absolute',
+            //    transitionDuration: '350ms',
+            top: 0,
+            bottom: 0,
+            left: '50%',
+          }}
+        ></div>
+        <div
+          style={{
+            backgroundImage: `url('birds.png')`,
+            backgroundRepeat: 'no-repeat',
+            filter: 'invert(1)',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center center',
+            width: '20%',
+            position: 'absolute',
+            top: 0,
+            bottom: '70%',
+            left: '43%',
+          }}
+        ></div>
+      </div>
+
+      <section
+        className='bg-purple full'
+        style={{ borderBottom: '4px solid black' }}
+      >
+        <div className='center'>
+          <h1
+            style={{
+              maxWidth: 600,
+              fontFamily: 'Oswald',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
+          >
+            Sydhavnen festival
+          </h1>
+          <h4
+            style={{ maxWidth: 600, marginLeft: 'auto', marginRight: 'auto' }}
+          >
+            {sections.intro.text}
+            {sections.intro.text}
+          </h4>
+        </div>
       </section>
-
-      <ImageSection background='/14.jpeg' />
-
+      <div className='flex'>
+        <img
+          src='20.jpeg'
+          style={{
+            height: 260,
+            border: '4px solid black',
+            flex: '1 1',
+            minWidth: 240,
+            maxWidth: 400,
+            objectFit: 'cover',
+          }}
+        ></img>
+        <img
+          src='14.jpeg'
+          style={{
+            height: 260,
+            border: '4px solid black',
+            flex: '1 1',
+            minWidth: 240,
+            maxWidth: 400,
+            objectFit: 'cover',
+          }}
+        ></img>
+        <img
+          src='9.jpeg'
+          style={{
+            height: 260,
+            border: '4px solid black',
+            flex: '1 1',
+            minWidth: 240,
+            maxWidth: 400,
+            objectFit: 'cover',
+          }}
+        ></img>
+        <img
+          src='20.jpeg'
+          style={{
+            height: 260,
+            border: '4px solid black',
+            flex: '1 1',
+            minWidth: 240,
+            maxWidth: 400,
+            objectFit: 'cover',
+          }}
+        ></img>
+      </div>
+      {/* 
       <section className='bg-black full'>
         <div
           className='bg-black flex'
@@ -108,7 +298,7 @@ export default function Home({ posts }: HomeProps) {
         >
           <MapGl posts={blogs} />
           <div className='right'>
-            <h1 style={{ maxWidth: 600, fontFamily: 'brutalismregular' }}>
+            <h1 style={{ maxWidth: 600, fontFamily: 'Oswald' }}>
               Sydhavnen område
             </h1>
             <h4 style={{ maxWidth: 600 }}>
@@ -166,7 +356,7 @@ export default function Home({ posts }: HomeProps) {
           <Cards posts={blogs} />
         </div>
         <TagsList posts={posts} />
-      </section>
+      </section> */}
 
       {/* <section className='bg-purple grid'>
         <img

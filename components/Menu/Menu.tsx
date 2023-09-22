@@ -8,8 +8,6 @@ import LargeMenu from '../LargeMenu/LargeMenu';
 
 export default function Menu() {
   const menuItems = [
-    { name: 'kort', link: 'map' },
-    { name: 'brugere', link: 'members' },
     { name: 'viden om', link: 'about' },
     { name: 'foreningen', link: 'association' },
   ];
@@ -19,7 +17,7 @@ export default function Menu() {
       <div className={styles.heightfix}></div>
       <nav
         role='navigation'
-        className={`bg-black menu ${styles.nav} ${open && styles.open} `}
+        className={` menu ${styles.nav} ${open && styles.open} `}
       >
         <SkipNav />
         <Link href='/'>

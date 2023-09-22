@@ -11,4 +11,10 @@
 .footer {
   display: flex;
   align-content: space-between;
+  li a {
+    color: pink;
+  }
+}
+footer a {
+  color: pink;
 }
